@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+        <h:head>
+        </h:head>
+        <h:body>
+            <ui:include src="langWithoutButton.xhtml"/>
+            <center>
+                <div>
+                    <h2>#{msg['orderlist']}</h2>
+                    <h:form>
+                        <h:dataTable value="#{requestBean.modelRequest}" var="item" 
+                                     styleClass="order-table"
+                                     headerClass="order-table-header"
+                                     rowClasses="order-table-odd-row,order-table-even-row"	
+                                     >
+                            <h:column>
+                                <f:facet name="header">#{msg['number']}</f:facet>
+                                #{item.code}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">#{msg['full_name']}</f:facet>
+                                #{item.credentials}
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">#{msg['status']}</f:facet>
+                                <h:outputText value="#{item.status}" />
+                            </h:column>
+                            <h:column>
+                                <f:facet name="header">#{msg['actions']}</f:facet>    
+                                <h:commandButton action="#{requestBean.removeRequest()}"  value="#{msg['delete']}" onclick="return confirm('#{msg['del_order']}')"/>
+                                <h:commandButton action="#{requestBean.setupEditRequest()}" value="#{msg['edit']}" />                           
+                                <h:commandButton action="#{requestBean.moveProductListPage()}" value="#{msg['confirm_order']}" />
+                            </h:column>
+                        </h:dataTable>
+
+
+                        <br/><br/><br/><br/>
+                        <h:panelGrid columns="2" >
+                            <h:commandButton value="Prev" action="#{requestBean.movePrevPageRequest()}" disabled="#{!requestBean.pagination.possiblePrev}"/>
+                            <h:commandButton value="Next" action="#{requestBean.moveNextPageRequest()}" disabled="#{!requestBean.pagination.possibleNext}"/>
+                        </h:panelGrid>  
+                        <h:commandButton value="#{msg['add_order']}" action="#{requestBean.setupAddRequest()}"/>
+                    </h:form>
+                </div>
+            </center>
+        </h:body>
+</html>
