@@ -6,6 +6,8 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 import org.dpolianskyi.epam.delivery.beans.LogBean;
 import org.dpolianskyi.epam.delivery.controller.dao.entity.interf.IRequestDAO;
+import org.dpolianskyi.epam.delivery.model.CurProduct_;
+import org.dpolianskyi.epam.delivery.model.Curpro_Request;
 import org.dpolianskyi.epam.delivery.model.Request;
 import org.dpolianskyi.epam.delivery.model.StatusEnum;
 
