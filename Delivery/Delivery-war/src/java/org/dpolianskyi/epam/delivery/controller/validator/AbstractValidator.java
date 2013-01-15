@@ -10,10 +10,11 @@ import javax.faces.validator.Validator;
 
 public abstract class AbstractValidator implements Validator {
 
-    protected static final String REQUESTCODE_PATTERN = "^[_A-Za-z0-9-]+(\\."
-            + "[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*"
-            + "(\\.[A-Za-z]{2,})$";
-    protected static final String NAME_PATTERN = "\\+\\d{12}";
+//    protected static final String REQUESTCODE_PATTERN = "^[_A-Za-z0-9-]+(\\."
+//            + "[_A-Za-z0-9-]+)*@[A-Za-z0-9]+(\\.[A-Za-z0-9]+)*"
+//            + "(\\.[A-Za-z]{2,})$";
+        protected static final String REQUESTCODE_PATTERN = "/[^a-z,A-Z,0-9,а-яіїєґ,А-ЯІЇЄҐ,\\-,\\_]/";
+    protected static final String NAME_PATTERN = "/[^a-z,A-Z,0-9,а-яіїєґ,А-ЯІЇЄҐ,\\-,\\_]/";
     protected static final String MODEL_PATTERN = "\\+\\d{12}";
     protected static final String CATEGORY_PATTERN = "\\+\\d{12}";
     protected static final String PRODUCER_PATTERN = "\\+\\d{12}";
