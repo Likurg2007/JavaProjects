@@ -194,10 +194,6 @@ public class RequestBean implements Serializable {
 
     public String createRequest() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
-        FacesMessage facesMessage = checkInputs(facesContext, request);
-        if (facesMessage != null) {
-            return "";
-        } else {
             try {
                 requestJPAController.persist(request);
                 actionResultBean.setResult("Request '" + request.getCode() + "' with id=" + request.getId() + " has been created.");
@@ -208,15 +204,10 @@ public class RequestBean implements Serializable {
                 return "";
             }
         }
-    }
 
 ////////////////////////////////////////////////////////
     public String createProduct() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
-        FacesMessage facesMessage = checkInputs(facesContext, curProd);
-        if (facesMessage != null) {
-            return "";
-        } else {
             try {
                 Category curCategory = new Category(curCategoryName, null);
                 Producer curProducer = new Producer(curProducerName, null);
@@ -239,14 +230,9 @@ public class RequestBean implements Serializable {
                 return "";
             }
         }
-    }
 
     public String editRequest() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
-        FacesMessage facesMessage = checkInputs(facesContext, request);
-        if (facesMessage != null) {
-            return "";
-        } else {
             try {
                 requestJPAController.merge(request);
                 actionResultBean.setResult("Request '" + request.getCode() + "' with id=" + request.getId() + " has been updated.");
@@ -257,14 +243,9 @@ public class RequestBean implements Serializable {
                 return "";
             }
         }
-    }
 
     public String editProduct() {
         FacesContext facesContext = FacesContext.getCurrentInstance();
-        FacesMessage facesMessage = checkInputs(facesContext, curProd);
-        if (facesMessage != null) {
-            return "";
-        } else {
             try {
                 Category curCategory = curProd.getCategory();
                 Model curModel = curProd.getModel();
@@ -285,7 +266,6 @@ public class RequestBean implements Serializable {
                 return "";
             }
         }
-    }
 
     public String removeRequest() {
         Request requestToRemove = modelRequest.getRowData();
@@ -316,15 +296,6 @@ public class RequestBean implements Serializable {
             actionResultBean.setResult("Error: " + e.getMessage());
             return "";
         }
-    }
-
-    private static FacesMessage checkInputs(FacesContext facesContext, Request request) {
-        FacesMessage facesMessage = null;
-        if (request.getCode().length() < 3) {
-            facesMessage = new FacesMessage("Request code should be more than 3 chars");
-            facesContext.addMessage(null, facesMessage);
-        }
-        return facesMessage;
     }
 
     public Pagination getPagination() {
@@ -390,15 +361,6 @@ public class RequestBean implements Serializable {
         System.out.println("setupEditProduct");
         curProd = modelCurProduct.getRowData();
         return PagesNS.PAGE_EDIT_PRODUCT;//"edit_request";
-    }
-
-    private static FacesMessage checkInputs(FacesContext facesContext, CurProduct curProd) {
-        FacesMessage facesMessage = null;
-        if (curProd.getName().length() < 3) {
-            facesMessage = new FacesMessage("Product name should be more than 3 chars");
-            facesContext.addMessage(null, facesMessage);
-        }
-        return facesMessage;
     }
 
     public String moveNextPageProduct() {
