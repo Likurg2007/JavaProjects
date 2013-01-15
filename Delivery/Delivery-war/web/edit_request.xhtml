@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+    </h:head>
+    <ui:include src="langWithoutButton.xhtml"/> 
+    <h:body>
+        <h:form>   
+            <center>
+                <div>
+                    <h3><h:outputText value="#{msg['edit_order']}"/></h3>
+                    <h:panelGrid columns="2">
+                        <h:outputLabel value="#{msg['number']}" />
+                        <h:inputText value="#{requestBean.request.code}"  required="true" />
+                        <h:outputLabel value="#{msg['full_name']}" />
+                        <h:inputText value="#{requestBean.request.credentials}"  required="true" />
+                        <h:outputLabel value="#{msg['status']}" />
+                        <h:selectOneRadio value="#{requestBean.request.status}">
+                            <f:selectItem itemValue="STATUS_PAID" itemLabel="#{msg['goodspayment_true']}" />   
+                            <f:selectItem itemValue="STATUS_UNPAID" itemLabel="#{msg['goodspayment_false']}" />
+                        </h:selectOneRadio>
+                    </h:panelGrid>
+                    <br/>
+                    <h:commandButton value="#{msg['confirm_edit']}" action="#{requestBean.editRequest}"/>
+                    <h:commandButton immediate="true" value="#{msg['cancel']}" action="list_requests"/>
+                </div>
+            </center>
+            <h:messages style="color:red;margin:8px;" />
+        </h:form>
+    </h:body>
+</html>
