@@ -1,3 +1,7 @@
+/**
+ * ssss
+ */
+
 package org.dpolianskyi.epam.delivery.beans;
 
 import java.io.IOException;
