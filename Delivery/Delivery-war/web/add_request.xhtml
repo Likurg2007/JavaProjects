@@ -16,7 +16,7 @@
                         <h:outputLabel value="#{msg['number']}" />
                         <h:inputText validator="requestCodeValidator" value="#{requestBean.request.code}"  required="true" />   
                         <h:outputLabel value="#{msg['full_name']}" />
-                        <h:inputText validator="nameValidator" value="#{requestBean.request.credentials}"  required="true" />
+                        <h:inputText value="#{requestBean.request.credentials}"  required="true" />
                         <h:outputLabel value="#{msg['status']}" />
                         <h:selectOneRadio value="#{requestBean.request.status}"> 
                             <f:selectItem itemValue="STATUS_PAID" itemLabel="#{msg['goodspayment_true']}" />

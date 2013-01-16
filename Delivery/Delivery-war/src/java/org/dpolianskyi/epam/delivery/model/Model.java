@@ -97,6 +97,6 @@ public class Model implements Serializable {
 
     @Override
     public String toString() {
-        return "Model{" + "id=" + id + ", name=" + name + ", desc=" + desc + ", curproduct=" + curproduct + '}';
+        return "Model{" + "id=" + id + ", name=" + name + ", desc=" + desc + '}';
     }
 }

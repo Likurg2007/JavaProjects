@@ -7,7 +7,45 @@
       xmlns:ui="http://java.sun.com/jsf/facelets"
       >
     <f:view locale="#{languageBean.locale}">
+        <script type="text/javascript" src="resources/js/jquery.js"></script>
+        <script type="text/javascript" src="resources/js/jquery-ui.js"></script>
+        <script type="text/javascript" src="resources/js/accordionImageMenu.js"></script>
+        <link rel="stylesheet" href="resources/css/accordionImageMenu.css" type="text/css" />
+
+        <script type="text/javascript">
+            $(document).ready(function() {
+	
+                jQuery('#acc-menu2').AccordionImageMenu({
+                    'border' : 1,
+                    'openItem':0,
+                    'duration': 400,
+                    'openDim': 310,
+                    'closeDim': 160,
+                    'effect': 'easeOutQuint',
+                    'fadeInTitle': false,
+                    'height':100 
+                });	
+		
+            });
+        </script>
+
+
         <h:body>
+
+            <h1 align="center">Jquery - Accordion Image Menu </h1>
+
+            <div id="acc-menu2" style="margin:10px auto">
+                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>This street</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_street1.jpg" alt="" title="This street" width="300" height="200" class="alignnone size-medium wp-image-806" /></a>
+                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>Nature</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_nature1.jpg" alt="" title="Bamboo" width="300" height="283" class="alignnone size-medium wp-image-803" /></a>
+                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>Landscape</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_landscape1.jpg" alt="" title="gift of light" width="241" height="300" class="alignnone size-medium wp-image-801" /></a>
+                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>Aerial</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_air1.jpg" alt="" title="Aerial" width="300" height="200" class="alignnone size-medium wp-image-800" /></a>
+            </div>
+
+            <p align="center">
+                More examples and documentation at: <a href="http://web-argument.com/jquery-accordion-image-menu-plugin">http://web-argument.com/jquery-accordion-image-menu-plugin</a>
+            </p>
+
+
             <center>
                 <h:form>
                     <h:commandLink action="#{languageBean.setLanguage('ru','RU')}">

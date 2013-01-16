@@ -96,6 +96,6 @@ public class Producer implements Serializable {
 
     @Override
     public String toString() {
-        return "Producer{" + "id=" + id + ", name=" + name + ", desc=" + desc + ", curproduct=" + curproduct + '}';
+        return "Producer{" + "id=" + id + ", name=" + name + ", desc=" + desc + '}';
     }
 }

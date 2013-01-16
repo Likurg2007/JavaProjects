@@ -120,6 +120,6 @@ public class Request implements Serializable {
 
     @Override
     public String toString() {
-        return "Request{" + "id=" + id + ", code=" + code + ", credent=" + credent + ", status=" + status + ", curproreq=" + curproreq + '}';
+        return "Request{" + "id=" + id + ", code=" + code + ", credent=" + credent + ", status=" + status + '}';
     }
 }

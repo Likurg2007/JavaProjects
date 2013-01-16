@@ -184,6 +184,6 @@ public class CurProduct implements Serializable {
 
     @Override
     public String toString() {
-        return "CurProduct{" + "id=" + id  + ", name=" + name + ", description=" + description + ", year=" + year + ", model=" + model + ", producer=" + producer + ", category=" + category + ", curproreq=" + curproreq + '}';
+        return "CurProduct{" + "id=" + id  + ", name=" + name + ", description=" + description + ", year=" + year + ", model=" + model + ", producer=" + producer + ", category=" + category + '}';
     }
 }
