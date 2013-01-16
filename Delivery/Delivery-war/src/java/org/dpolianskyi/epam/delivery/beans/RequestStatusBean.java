@@ -25,8 +25,8 @@ public class RequestStatusBean implements Serializable {
     private Curpro_Request delivery;
     private Curpro_RequestDAO deliveryJPAController = null;
     private String selectedRow;
-    @ManagedProperty(value = "#{actionResultBean}")
-    private ActionResultBean actionResultBean;
+    private final static String PAGINATIONERROR = "Something caused the error of pagging";
+    private final static String REMOVEERROR = "Error with removing of ";
 
     public void setDAO(Curpro_RequestDAO dao) {
         this.deliveryJPAController = dao;
@@ -38,14 +38,6 @@ public class RequestStatusBean implements Serializable {
 
     public String getSelectedRow() {
         return selectedRow;
-    }
-
-    public void setActionResultBean(ActionResultBean actionResultBean) {
-        this.actionResultBean = actionResultBean;
-    }
-
-    public ActionResultBean getActionResultBean() {
-        return actionResultBean;
     }
 
     public Curpro_Request getDelivery() {
@@ -68,7 +60,7 @@ public class RequestStatusBean implements Serializable {
                 movePrevPage();
             }
         } catch (Exception e) {
-            actionResultBean.setResult("Error: " + e.getMessage());
+            LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
         }
         return model;
     }
@@ -76,14 +68,12 @@ public class RequestStatusBean implements Serializable {
     public String removeDelivery() {
         Curpro_Request deliveryToRemove = model.getRowData();
         Long deletedId = deliveryToRemove.getId();
-        Long deletedDeliveryID = deliveryToRemove.getId();
         try {
             deliveryJPAController.remove(deliveryToRemove);
-            actionResultBean.setResult("Delivery '" + deletedDeliveryID + "' with id=" + deletedId + " has been deleted.");
             PageController.updateModel(model, pagination, deliveryJPAController);
             return PagesNS.PAGE_LIST_DELIVERY;//"list_delivery";
         } catch (Exception e) {
-            actionResultBean.setResult("Error: " + e.getMessage());
+            LogBean.getLogger().error(REMOVEERROR + " " + deletedId + " " + java.util.Calendar.getInstance().getTime(), e);
             return "";
         }
     }
@@ -104,8 +94,7 @@ public class RequestStatusBean implements Serializable {
                 PageController.updateModel(model, pagination, deliveryJPAController);
                 return PagesNS.PAGE_LIST_DELIVERY;//"list_delivery";
             } catch (Exception e) {
-                //log.error(e);
-                actionResultBean.setResult("Error: " + e.getMessage());
+                LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
                 return "";
             }
         } else {
@@ -123,8 +112,7 @@ public class RequestStatusBean implements Serializable {
                 PageController.updateModel(model, pagination, deliveryJPAController);
                 return PagesNS.PAGE_LIST_DELIVERY;//"list_delivery";
             } catch (Exception e) {
-                // log.error(e);
-                actionResultBean.setResult("Error: " + e.getMessage());
+                LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
                 return "";
             }
         } else {

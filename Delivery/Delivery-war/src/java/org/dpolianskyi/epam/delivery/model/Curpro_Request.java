@@ -1,6 +1,7 @@
 package org.dpolianskyi.epam.delivery.model;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -19,10 +20,10 @@ public class Curpro_Request implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CURPRO_REQUEST_ID")
     private Long id;
-    @ManyToOne
+    @ManyToOne (cascade= CascadeType.ALL)
     @JoinColumn(name = "REQUEST")
     private Request request;
-    @ManyToOne (fetch= FetchType.EAGER)
+    @ManyToOne (fetch= FetchType.EAGER, cascade= CascadeType.ALL)
     @JoinColumn(name = "CURPRODUCT")
     private CurProduct curproduct;
     @Column(name = "CURPRO_QUANTITY")

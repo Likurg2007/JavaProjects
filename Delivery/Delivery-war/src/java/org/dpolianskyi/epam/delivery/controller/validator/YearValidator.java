@@ -11,19 +11,19 @@ import javax.faces.context.FacesContext;
 import javax.faces.validator.FacesValidator;
 import javax.faces.validator.ValidatorException;
 
-@FacesValidator("nameValidator")
-public class NameValidator extends AbstractValidator {
-    
-    public NameValidator() {
-        pattern = Pattern.compile(NAME_PATTERN);
+@FacesValidator("yearValidator")
+public class YearValidator extends AbstractValidator {
+
+    public YearValidator() {
+        pattern = Pattern.compile(YEAR_PATTERN);
     }
-    
+
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
-        if (!validateName(value)) {
+        if (!validateYear(value)) {
             FacesMessage message =
-                    new FacesMessage("Name should be as XXXXXXXXXX Y.Z. or XXXXXXXXXX YYYYY ZZZZZZZZZZZZ, where X - symbols of surname, Y - symbols of firstname, Z - symbols of middlename",
-                    "Invalid full name request.");
+                    new FacesMessage("Year should be in XXXX-format",
+                    "Invalid year input.");
             message.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(message);
         }

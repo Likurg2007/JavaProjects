@@ -18,7 +18,7 @@
                         <h:outputLabel value="#{msg['model']}" />
                         <h:inputText value="#{requestBean.curModelName}"  required="true" />
                         <h:outputLabel value="#{msg['year']}" />
-                        <h:inputText value="#{requestBean.curProduct.year}"  required="true" />
+                        <h:inputText validator="yearValidator" value="#{requestBean.curProduct.year}"  required="false" />
                         <h:outputLabel value="#{msg['description']}" />
                         <h:inputText value="#{requestBean.curProduct.description}"  required="true" />
                         <h:outputLabel value="#{msg['category']}" />
@@ -36,7 +36,6 @@
                     <h:commandButton immediate="true" value="#{msg['cancel']}" action="list_products"/>
                 </div>
             </center>
-            <h:messages style="color:red;margin:8px;" />
         </h:form>
     </h:body>
 </html>

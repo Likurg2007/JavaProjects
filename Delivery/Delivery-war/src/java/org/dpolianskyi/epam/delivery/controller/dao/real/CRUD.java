@@ -16,25 +16,12 @@ public abstract class CRUD<E, K> implements ICRUD<E, K> {
     private final static String MERGEMSG = "Try to merge: ";
     private final static String FINDIDMSG = "Try to find by id: ";
     private Class<E> entityClass;
-    //protected EntityManager entityManager;
     protected EntityManagerFactory emf = null;
 
     public EntityManager getEntityManager() {
         return emf.createEntityManager();
     }
 
-//    public CRUD() {
-//        //EntityManager entityManager = getEntityManager();
-//        try {
-//            EntityManager entityManager = Persistence.createEntityManagerFactory("Delivery-warPU").createEntityManager();
-//            ParameterizedType genericSuperclass = (ParameterizedType) getClass().
-//                    getGenericSuperclass();
-//            this.entityClass = (Class<E>) genericSuperclass.
-//                    getActualTypeArguments()[0];
-//        } catch (Exception ex) {
-//            logger.log(Level.SEVERE, "Exception  (): ", ex);
-//        }
-//    }
     public CRUD(Class<E> entityClass) {
         this.entityClass = entityClass;
     }
