@@ -6,62 +6,147 @@
       xmlns:f="http://java.sun.com/jsf/core"
       xmlns:ui="http://java.sun.com/jsf/facelets"
       >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="resources/buttons/buttons.css" />
+    <title>Elegant Accordion with jQuery and CSS3</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="description" content="Elegant Accordion with jQuery and CSS3" />
+    <meta name="keywords" content="jquery, slide out,accordion, css3, fadeout, fadein, elegant, fancy, box shadow"/>
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen"/>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:Arial;
+            background:#fff url(pattern.png) repeat top left;
+        }
+        a{
+            color:#444;
+        }
+        a:hover{
+            color:#999;
+        }
+        .title{
+            width:500px;
+            height:152px;
+            position:absolute;
+            top:0px;
+            left:0px;
+            background:transparent url(title.png) no-repeat top left;
+        }
+        a.back{
+            background:transparent url(back.png) no-repeat top left;
+            position:fixed;
+            width:150px;
+            height:27px;
+            outline:none;
+            bottom:0px;
+            left:0px;
+        }
+        #content{
+            margin:0 auto;
+        }
+        .reference{
+            clear:both;
+            top:300px;
+            left:0px;
+            position:absolute;
+            text-align:right;
+            width:400px;
+            padding:20px;
+            background-color:#fff;
+            -moz-box-shadow:1px 3px 15px #ddd;
+            -webkit-box-shadow:1px 3px 15px #ddd;
+            box-shadow:1px 3px 15px #ddd;
+        }
+        .reference p a{
+            text-transform:uppercase;
+            text-shadow:1px 1px 1px #fff;
+            color:#666;
+            text-decoration:none;
+            font-size:10px;
+        }
+        .reference p a:hover{
+            color:#333;
+        }
+
+    </style>
+
+    <!-- The JavaScript -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(function() {
+            $('#accordion > li').hover(
+            function () {
+                var $this = $(this);
+                $this.stop().animate({'width':'480px'},500);
+                $('.heading',$this).stop(true,true).fadeOut();
+                $('.bgDescription',$this).stop(true,true).slideDown(500);
+                $('.description',$this).stop(true,true).fadeIn();
+            },
+            function () {
+                var $this = $(this);
+                $this.stop().animate({'width':'115px'},1000);
+                $('.heading',$this).stop(true,true).fadeIn();
+                $('.description',$this).stop(true,true).fadeOut(500);
+                $('.bgDescription',$this).stop(true,true).slideUp(700);
+            }
+        );
+        });
+    </script>
+
+
     <f:view locale="#{languageBean.locale}">
-        <script type="text/javascript" src="resources/js/jquery.js"></script>
-        <script type="text/javascript" src="resources/js/jquery-ui.js"></script>
-        <script type="text/javascript" src="resources/js/accordionImageMenu.js"></script>
-        <link rel="stylesheet" href="resources/css/accordionImageMenu.css" type="text/css" />
-
-        <script type="text/javascript">
-            $(document).ready(function() {
-	
-                jQuery('#acc-menu2').AccordionImageMenu({
-                    'border' : 1,
-                    'openItem':0,
-                    'duration': 400,
-                    'openDim': 310,
-                    'closeDim': 160,
-                    'effect': 'easeOutQuint',
-                    'fadeInTitle': false,
-                    'height':100 
-                });	
-		
-            });
-        </script>
-
-
         <h:body>
 
-            <h1 align="center">Jquery - Accordion Image Menu </h1>
+            <div id="content">
 
-            <div id="acc-menu2" style="margin:10px auto">
-                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>This street</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_street1.jpg" alt="" title="This street" width="300" height="200" class="alignnone size-medium wp-image-806" /></a>
-                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>Nature</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_nature1.jpg" alt="" title="Bamboo" width="300" height="283" class="alignnone size-medium wp-image-803" /></a>
-                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>Landscape</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_landscape1.jpg" alt="" title="gift of light" width="241" height="300" class="alignnone size-medium wp-image-801" /></a>
-                <a href="http://web-argument.com/jquery-accordion-image-menu-plugin"><span>Aerial</span><img src="http://web-argument.com/wp-content/uploads/2011/03/accordion_menu_air1.jpg" alt="" title="Aerial" width="300" height="200" class="alignnone size-medium wp-image-800" /></a>
+                <h:form>
+
+                    <ul class="accordion" id="accordion">
+                        <li class="bg1">
+                            <div class="heading">English</div>
+                            <h:commandLink action="#{languageBean.setLanguageRedirect('eng','ENG')}">
+                                <h:graphicImage style="width: 100%; height: 100%" url="resources/img/us_big.jpg"></h:graphicImage>
+                            </h:commandLink>
+                            <div class="description">
+                                <h2>English</h2>
+
+                            </div>
+                        </li>
+
+                        <li class="bg2">
+                            <div class="heading">Ukranian</div>
+                            <h:commandLink action="#{languageBean.setLanguageRedirect('ua','UA')}">
+                                <h:graphicImage style="width: 100%; height: 100%" url="resources/img/ua_big.jpg"></h:graphicImage>
+                            </h:commandLink> 
+                            <div class="description">
+                                <h2>Ukranian</h2>
+                            </div>
+
+                        </li>
+                        <li class="bg3">
+                            <div class="heading">Russian</div>
+                            <h:commandLink action="#{languageBean.setLanguageRedirect('ru','RU')}">
+                                <h:graphicImage style="width: 100%; height: 100%" value="resources/img/ru_big.jpg"/>
+                            </h:commandLink>
+                            <div class="description">
+                                <h2>Russian</h2>
+                            </div>
+                        </li>
+                    </ul>
+                </h:form>
             </div>
+            <p class="note">Какой-то текст.</p>
 
-            <p align="center">
-                More examples and documentation at: <a href="http://web-argument.com/jquery-accordion-image-menu-plugin">http://web-argument.com/jquery-accordion-image-menu-plugin</a>
-            </p>
-
-
-            <center>
-                <h:form>
-                    <h:commandLink action="#{languageBean.setLanguage('ru','RU')}">
-                        <h:graphicImage value="resources/img/ru.png"/>
-                    </h:commandLink>
-                    <h:commandLink action="#{languageBean.setLanguage('ua','UA')}">
-                        <h:graphicImage url="resources/img/ua.png"></h:graphicImage>
-                    </h:commandLink> 
-                    <h:commandLink action="#{languageBean.setLanguage('eng','ENG')}">
-                        <h:graphicImage url="resources/img/us.png"></h:graphicImage>
-                    </h:commandLink>
-                </h:form>
-                <h:form>
-                    <h:commandButton action="#{requestBean.moveRequestPage()}" value="#{msg['move_requests']}" />
-                </h:form>
-            </center>
+            <div id="footer">
+                <div class="tri"></div>
+                <h1>Delivery Service</h1>
+            </div>
         </h:body>
     </f:view>
 </html>
