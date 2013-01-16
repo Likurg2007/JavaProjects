@@ -10,30 +10,31 @@
     <h:body>
         <h:form>
             <center>
-                <div>
+                <div id="buttonContainer" class="commontext">
                     <h3><h:outputText value="#{msg['add_product_header']}"/></h3>
                     <h:panelGrid columns="2">
                         <h:outputLabel value="#{msg['name']}" />
-                        <h:inputText value="#{requestBean.curProduct.name}"  required="true" />
+                        <h:inputText validator="modelValidator" value="#{requestBean.curProduct.name}"  required="true" />
                         <h:outputLabel value="#{msg['model']}" />
-                        <h:inputText value="#{requestBean.curModelName}"  required="true" />
+                        <h:inputText validator="modelValidator" value="#{requestBean.curModelName}"  required="true" />
                         <h:outputLabel value="#{msg['year']}" />
                         <h:inputText validator="yearValidator" value="#{requestBean.curProduct.year}"  required="false" />
                         <h:outputLabel value="#{msg['description']}" />
                         <h:inputText value="#{requestBean.curProduct.description}"  required="true" />
                         <h:outputLabel value="#{msg['category']}" />
-                        <h:inputText value="#{requestBean.curCategoryName}"  required="true" />
+                        <h:inputText validator="categoryValidator" value="#{requestBean.curCategoryName}"  required="true" />
                         <h:outputLabel value="#{msg['producer']}" />
-                        <h:inputText value="#{requestBean.curProducerName}"  required="true" />
+                        <h:inputText validator="producerValidator" value="#{requestBean.curProducerName}"  required="true" />
                         <h:outputLabel value="#{msg['status']}" />
                         <h:selectOneRadio value="#{requestBean.curProduct.status}"> 
                             <f:selectItem itemValue="STATUS_AVAILABLE" itemLabel="#{msg['goodsavail_true']}" />
                             <f:selectItem itemValue="STATUS_UNAVAILABLE" itemLabel="#{msg['goodsavail_false']}" />
                         </h:selectOneRadio>
                     </h:panelGrid>
-                    <br/>
-                    <h:commandButton value="#{msg['add']}" action="#{requestBean.createProduct()}"/>
-                    <h:commandButton immediate="true" value="#{msg['cancel']}" action="list_products"/>
+                    <h:panelGrid columns="2">
+                        <h:commandLink hreflang="#" class="button small green" value="#{msg['add']}" action="#{requestBean.createProduct()}"/>
+                        <h:commandLink hreflang="#" class="button small red" immediate="true" value="#{msg['cancel']}" action="list_products"/>
+                    </h:panelGrid>
                 </div>
             </center>
         </h:form>

@@ -10,7 +10,7 @@
     <h:body>
         <h:form>
             <center>
-                <div>
+                <div id="buttonContainer" class="commontext">
                     <h3><h:outputText value="#{msg['add_order_header']}"/></h3>
                     <h:panelGrid columns="2">
                         <h:outputLabel value="#{msg['number']}" />
@@ -24,8 +24,10 @@
                         </h:selectOneRadio>
                     </h:panelGrid>
                     <br/>
-                    <h:commandButton value="#{msg['add']}" action="#{requestBean.createRequest}"/>
-                    <h:commandButton immediate="true" value="#{msg['cancel']}" action="list_requests"/>
+                    <h:panelGrid columns="2">                    
+                        <h:commandLink hreflang="#" class="button small green" value="#{msg['add']}" action="#{requestBean.createRequest}"/>
+                        <h:commandLink hreflang="#" class="button small red" immediate="true" value="#{msg['cancel']}" action="list_requests"/>
+                    </h:panelGrid>
                 </div>
             </center>
         </h:form>

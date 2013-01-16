@@ -6,15 +6,15 @@ import javax.faces.context.FacesContext;
 import javax.faces.validator.FacesValidator;
 import javax.faces.validator.ValidatorException;
 
-@FacesValidator("productValidator")
-public class ProductValidator extends AbstractValidator {
+@FacesValidator("categoryValidator")
+public class CategoryValidator extends AbstractValidator {
     
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
-        if (!validateModel(value) && !validateCategory(value) && !validateProducer(value)) {
+        if (!validateCategory(value)) {
             FacesMessage message =
-                    new FacesMessage("Your login validation failed",
-                    "Invalid login format");
+                    new FacesMessage("Information about Category is incorrect",
+                    "Invalid category input information");
             message.setSeverity(FacesMessage.SEVERITY_ERROR);
             throw new ValidatorException(message);
         }

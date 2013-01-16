@@ -80,4 +80,14 @@ public class LanguageBean implements Serializable {
         locale = new Locale(language, languageB);
         FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
     }
+
+    public void setLanguageRedirect(String language, String languageB) throws IOException {
+        locale = new Locale(language, languageB);
+        FacesContext.getCurrentInstance().getViewRoot().setLocale(locale);
+        moveRequestPage();
+    }
+
+    public void moveRequestPage() throws IOException {
+        FacesContext.getCurrentInstance().getExternalContext().redirect("list_requests.xhtml");
+    }
 }

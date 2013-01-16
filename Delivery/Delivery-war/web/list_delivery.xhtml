@@ -9,11 +9,11 @@
     <h:body>
         <ui:include src="langWithoutButton.xhtml"/>              
         <center>
-            <div>
+            <div id="buttonContainer" class="commontext">
                 <h2>#{msg['deliverylist']}</h2>
                 <h:form>
                     <h:dataTable value="#{requestStatusBean.model}" var="item" 
-                                 styleClass="order-table"
+                                 styleClass="commontext"
                                  headerClass="order-table-header"
                                  rowClasses="order-table-odd-row,order-table-even-row"	
                                  >

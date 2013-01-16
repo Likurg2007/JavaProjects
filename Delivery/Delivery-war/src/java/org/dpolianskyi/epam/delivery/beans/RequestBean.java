@@ -150,7 +150,9 @@ public class RequestBean implements Serializable {
         return modelRequest;
     }
 
-    public DataModel<CurProduct> getModelCurProduct() {
+    public DataModel<CurProduct> getModelCurProduct() throws Exception {
+       // modelCurProduct=(DataModel<CurProduct>) selectCurRequest();
+        System.out.println("modelCurProduct:   " + modelCurProduct);
         try {
             PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
             if ((modelCurProduct.getRowCount() < 1) && (pagination.isPossiblePrev())) {
@@ -267,14 +269,14 @@ public class RequestBean implements Serializable {
     }
 
     public String removeProduct() {
-        modelCurProduct = getModelCurProduct();
+       // modelCurProduct = getModelCurProduct();
         CurProduct productToRemove = modelCurProduct.getRowData();
         Long deletedId = productToRemove.getId();
         String deletedProductName = productToRemove.getName();
         try {
             curProductJPAController.remove(productToRemove);
             PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
-            
+
             return PagesNS.PAGE_LIST_PRODUCTS;//"list_products";
         } catch (Exception e) {
             LogBean.getLogger().error(REMOVEERROR + " " + deletedId + "-" + deletedProductName + " " + java.util.Calendar.getInstance().getTime(), e);
