@@ -2,11 +2,8 @@ package org.dpolianskyi.epam.delivery.beans;
 
 import java.io.IOException;
 import java.io.Serializable;
-import java.util.logging.Logger;
 import javax.faces.bean.ManagedBean;
-import javax.faces.bean.ManagedProperty;
 import javax.faces.bean.SessionScoped;
-import javax.faces.context.FacesContext;
 import javax.faces.model.DataModel;
 import javax.faces.model.ListDataModel;
 import org.dpolianskyi.epam.delivery.controller.dao.abstr.JpaDAOFactory;
@@ -18,7 +15,6 @@ import org.dpolianskyi.epam.delivery.paging.*;
 @SessionScoped
 public class RequestStatusBean implements Serializable {
 
-    private Logger log = Logger.getLogger(getClass().getName());
     private Pagination pagination = new Pagination(5, 0);
     private static final long serialVersionUID = 1L;
     private DataModel<Curpro_Request> model;
@@ -27,6 +23,7 @@ public class RequestStatusBean implements Serializable {
     private String selectedRow;
     private final static String PAGINATIONERROR = "Something caused the error of pagging";
     private final static String REMOVEERROR = "Error with removing of ";
+    private final static String REQUESTPAGE = "requestpage";
 
     public void setDAO(Curpro_RequestDAO dao) {
         this.deliveryJPAController = dao;
@@ -120,8 +117,7 @@ public class RequestStatusBean implements Serializable {
         }
     }
 
-    public void moveProductListPage() throws IOException {
-        selectedRow = model.getRowData().getId().toString();
-        FacesContext.getCurrentInstance().getExternalContext().redirect("list_products.xhtml");
+    public String moveRequestPage() throws IOException {
+        return REQUESTPAGE;
     }
 }

@@ -7,47 +7,47 @@
     <h:head>
     </h:head>
     <h:body>
-        <ui:include src="langWithoutButton.xhtml"/>              
+        <ui:include src="langWithoutButton.xhtml"/>
         <center>
-            <div id="buttonContainer" class="commontext">
-                <h2>#{msg['deliverylist']}</h2>
-                <h:form>
-                    <h:dataTable value="#{requestStatusBean.model}" var="item" 
+            <h:form>            
+                <div id="buttonContainer" class="commontext">
+                    <h2 style="size: 15px; color: #212121">#{msg['deliverylist']}</h2>                   
+                    <h:dataTable value="#{requestBean.modelRequest}" var="item" 
                                  styleClass="commontext"
                                  headerClass="order-table-header"
                                  rowClasses="order-table-odd-row,order-table-even-row"	
                                  >
                         <h:column>
-                            <f:facet name="header">#{msg['number']}</f:facet>
-                            #{item.id}
+                            <f:facet name="header"><h>#{msg['number']}</h></f:facet>
+                            #{item.code}
                         </h:column>
                         <h:column>
                             <f:facet name="header">#{msg['full_name']}</f:facet>
-                            #{item.request.code}
+                            #{item.credentials}
                         </h:column>
                         <h:column>
-                            <f:facet name="header">#{msg['goods_payment']}</f:facet>
-                            #{item.request.status}
+                            <f:facet name="header"><h>#{msg['status_paid']}</h></f:facet>
+                            <h:outputText value="#{item.status}" />
                         </h:column>
                         <h:column>
-                            <f:facet name="header">#{msg['product_availability']}</f:facet>
-                            #{item.curProd.status}
+                            <f:facet name="header"><h>#{msg['status_existence']}</h></f:facet>
+                            <h:outputText value="#{requestBean.curProduct.status}" />
                         </h:column>
                         <h:column>
-                            <f:facet name="header">#{msg['actions']}</f:facet>    
-                            <h:commandButton action="#{requestBean.removeRequest()}"  value="#{msg['delete']}" onclick="return confirm('#{msg['del_order']}')"/>
+                            <f:facet name="header"><h>#{msg['actions']}</h></f:facet>    
+                            <h:commandLink hreflang="#" class="button small red" action="#{requestBean.removeRequest()}" value="#{msg['denial_of_delivery']}" onclick="return confirm('#{msg['del_order']}')"/>                        
+                            <h:commandLink hreflang="#" class="button small green" action="#{requestBean.moveProductListPage()}" value="#{msg['confirm_order']}" />
                         </h:column>
                     </h:dataTable>
-
-
-                    <br/><br/><br/><br/>
-                          <h:panelGrid columns="2" >
-                              <h:commandButton value="Prev" action="#{requestStatusBean.movePrevPage()}" disabled="#{!requestStatusBean.pagination.possiblePrev}"/>
-                              <h:commandButton value="Next" action="#{requestStatusBean.moveNextPage()}" disabled="#{!requestStatusBean.pagination.possibleNext}"/>
-                          </h:panelGrid>   
-                    <h:commandButton action="#{requestBean.moveRequestPage()}" value="#{msg['move_requests']}" />
-                </h:form>
-            </div>
+                </div>
+            </h:form>
+            <h:form>
+                <h:panelGrid columns="3">
+                    <h:commandLink hreflang="#" class="button small gray"  value="Prev" action="#{requestBean.movePrevPageRequest()}" disabled="#{!requestBean.pagination.possiblePrev}"/>
+                    <h:commandLink  hreflang="#" class="button small gray" value="#{msg['move_requests']}" action="#{requestBean.moveRequestPage()}"/>
+                    <h:commandLink hreflang="#" class="button small gray" value="Next" action="#{requestBean.moveNextPageRequest()}" disabled="#{!requestBean.pagination.possibleNext}"/>   
+                </h:panelGrid>
+            </h:form>
         </center>
     </h:body>
 </html>

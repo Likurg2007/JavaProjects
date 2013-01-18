@@ -12,7 +12,7 @@
             <h:form> 
                 <div id="buttonContainer" class="commontext">
                     <h2 style="size: 15px; color: #212121">#{msg['productlist']}</h2>
-                    <h:dataTable value="#{requestBean.modelCurProduct}" var="item" styleClass="commontext">
+                    <h:dataTable value="#{requestBean.modelCurProduct}" var="item" styleClass="commontext" onclick="#{requestBean.modelCurProduct}">
                         <h:column>
                             <f:facet name="header">#{msg['name']}</f:facet>
                             #{item.name}
@@ -38,7 +38,7 @@
                             #{item.producer.name}
                         </h:column>
                         <h:column>
-                            <f:facet name="header">#{msg['status']}</f:facet>
+                            <f:facet name="header">#{msg['status_existence']}</f:facet>
                             #{item.status}
                         </h:column>  
                         <h:column>
@@ -51,7 +51,7 @@
 
                     <h:panelGrid columns="3">
                         <h:commandLink hreflang="#" class="button small gray" action="#{requestBean.moveRequestPage()}" value="#{msg['move_requests']}" />
-                        <h:commandLink hreflang="#" class="button small green" action="#{requestBean.moveRequestPage()}" value="#{msg['confirm_order']}" />
+                        <h:commandLink hreflang="#" class="button small green" action="#{requestBean.moveDeliveryPage()}" value="#{msg['confirm_order']}" />
                         <h:commandLink hreflang="#" class="button small gray" action="#{requestBean.moveDeliveryPage()}" value="#{msg['move_delivery']}" />
                     </h:panelGrid>
                 </div>

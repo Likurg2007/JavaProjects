@@ -25,7 +25,7 @@
                         <h:inputText validator="categoryValidator" value="#{requestBean.curCategoryName}"  required="true" />
                         <h:outputLabel value="#{msg['producer']}" />
                         <h:inputText validator="producerValidator" value="#{requestBean.curProducerName}"  required="true" />
-                        <h:outputLabel value="#{msg['status']}" />
+                        <h:outputLabel value="#{msg['status_existence']}" />
                         <h:selectOneRadio value="#{requestBean.curProduct.status}"> 
                             <f:selectItem itemValue="STATUS_AVAILABLE" itemLabel="#{msg['goodsavail_true']}" />
                             <f:selectItem itemValue="STATUS_UNAVAILABLE" itemLabel="#{msg['goodsavail_false']}" />

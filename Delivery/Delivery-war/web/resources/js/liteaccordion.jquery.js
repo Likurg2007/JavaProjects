@@ -1,14 +1,3 @@
-/*************************************************
-*
-*	project:  	liteAccordion - horizontal accordion plugin for jQuery
-*	author:   	Nicola Hibbert
-*	url:	  	http://nicolahibbert.com/horizontal-accordion-jquery-plugin
-*	demo:	  	http://www.nicolahibbert.com/demo/liteAccordion
-*
-*	Version:  	1.1.3
-*	Copyright: 	(c) 2010-2011 Nicola Hibbert
-*
-/*************************************************/
 ;(function($) {
 	
 	$.fn.liteAccordion = function(options) {

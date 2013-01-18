@@ -13,7 +13,7 @@ public abstract class AbstractValidator implements Validator {
     protected static final String REQUESTCODE_PATTERN = "[A-ZА-ЯІЇЄҐ]{2}+\\d{8}";
     protected static final String NAME_PATTERN = "/^[а-яёА-ЯЁ\\s]+$/";
     protected static final String YEAR_PATTERN = "(20)\\d\\d";
-    protected static final String MODEL_PATTERN = "^[A-Za-z0-9_- ]{3,30}$";
+    protected static final String MODEL_PATTERN = "^[A-Za-z0-9\\s]{3,30}$";
     protected static final String CATEGORY_PATTERN = "^[A-Za-z]{3,30}$";
     protected static final String PRODUCER_PATTERN = "^[A-Za-z]{3,30}$";
     protected Pattern pattern;
