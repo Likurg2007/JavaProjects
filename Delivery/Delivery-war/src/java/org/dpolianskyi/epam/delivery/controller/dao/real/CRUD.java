@@ -29,7 +29,7 @@ public abstract class CRUD<E, K> implements ICRUD<E, K> {
     @Override
     public void persist(E entity) throws Exception {
         EntityManager entityManager = getEntityManager();
-        LogBean.getLogger().debug(PERSISTMSG + entity.getClass().getSimpleName()+ " " + java.util.Calendar.getInstance().getTime());
+        LogBean.getLogger().debug(PERSISTMSG + entity.getClass().getSimpleName() + " " + java.util.Calendar.getInstance().getTime());
         entityManager.getTransaction().begin();
         entityManager.persist(entity);
         entityManager.getTransaction().commit();
@@ -38,37 +38,35 @@ public abstract class CRUD<E, K> implements ICRUD<E, K> {
     @Override
     public void remove(E entity) throws Exception {
         EntityManager entityManager = getEntityManager();
-        LogBean.getLogger().debug(REMOVEMSG + entity.getClass().getSimpleName()+ " " + java.util.Calendar.getInstance().getTime());
+        System.out.println("REMOVE (CRUD)");
+        LogBean.getLogger().debug(REMOVEMSG + entity.getClass().getSimpleName() + " " + java.util.Calendar.getInstance().getTime());
         entityManager.getTransaction().begin();
         entityManager.remove(entityManager.merge(entity));
         entityManager.getTransaction().commit();
     }
-    
-    
+
     @Override
-	public List<E> findEntities(boolean all, int maxResults, int firstResult) throws Exception  {
-    	EntityManager em = getEntityManager();
+    public List<E> findEntities(boolean all, int maxResults, int firstResult) throws Exception {
+        EntityManager em = getEntityManager();
         try {
-        	Query q = em.createQuery("SELECT A FROM " + entityClass.getSimpleName() + " A");
-        	if (!all) {
+            Query q = em.createQuery("SELECT A FROM " + entityClass.getSimpleName() + " A");
+            if (!all) {
                 q.setMaxResults(maxResults);
                 q.setFirstResult(firstResult);
             }
-            List<E> resultList = (List<E>)q.getResultList();
-			return resultList;
-        } 
-        catch(Exception e){
-        	//log.error(e);
-        	throw e;
-        }
-       finally {
-    	   if (em != null) { 
-           	em.close(); 
-           }
+            List<E> resultList = (List<E>) q.getResultList();
+            return resultList;
+        } catch (Exception e) {
+            //log.error(e);
+            throw e;
+        } finally {
+            if (em != null) {
+                em.close();
+            }
 
-       }
-	   //return null;
-	}
+        }
+        //return null;
+    }
 
     @Override
     public void merge(E entity) throws Exception {
@@ -82,7 +80,7 @@ public abstract class CRUD<E, K> implements ICRUD<E, K> {
     @Override
     public E findById(K id) throws Exception {
         EntityManager entityManager = getEntityManager();
-        LogBean.getLogger().debug(FINDIDMSG + id+ " " + java.util.Calendar.getInstance().getTime());
+        LogBean.getLogger().debug(FINDIDMSG + id + " " + java.util.Calendar.getInstance().getTime());
         entityManager.getTransaction().begin();
         E result = entityManager.find(entityClass, id);
         entityManager.getTransaction().commit();

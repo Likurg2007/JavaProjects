@@ -1,6 +1,5 @@
 package org.dpolianskyi.epam.delivery.paging;
 
-
 /**
  *
  * @author Likurg

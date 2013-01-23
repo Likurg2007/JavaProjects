@@ -20,10 +20,10 @@ public class Curpro_Request implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "CURPRO_REQUEST_ID")
     private Long id;
-    @ManyToOne (cascade= CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "REQUEST")
     private Request request;
-    @ManyToOne (fetch= FetchType.EAGER, cascade= CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "CURPRODUCT")
     private CurProduct curproduct;
     @Column(name = "CURPRO_QUANTITY")

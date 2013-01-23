@@ -13,11 +13,11 @@ import javax.faces.validator.ValidatorException;
 
 @FacesValidator("nameValidator")
 public class NameValidator extends AbstractValidator {
-    
+
     public NameValidator() {
         pattern = Pattern.compile(NAME_PATTERN);
     }
-    
+
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         if (!validateName(value)) {

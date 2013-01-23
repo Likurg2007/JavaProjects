@@ -8,7 +8,7 @@ import javax.faces.validator.ValidatorException;
 
 @FacesValidator("categoryValidator")
 public class CategoryValidator extends AbstractValidator {
-    
+
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         if (!validateCategory(value)) {

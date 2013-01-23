@@ -31,7 +31,7 @@ public class Request implements Serializable {
     @Column(name = "REQUEST_STATUS")
     @Enumerated(EnumType.STRING)
     private StatusEnum status;
-    @OneToMany(mappedBy = "request", cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = "request", cascade = CascadeType.MERGE)
     private Set<Curpro_Request> curproreq = new HashSet<Curpro_Request>();
 
     public Request() {

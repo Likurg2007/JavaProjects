@@ -12,7 +12,7 @@
             <h:form>            
                 <div id="buttonContainer" class="commontext">
                     <h2 style="size: 15px; color: #212121">#{msg['deliverylist']}</h2>                   
-                    <h:dataTable value="#{requestBean.modelRequest}" var="item" 
+                    <h:dataTable value="#{requestBean.confirmRequest()}" var="item" 
                                  styleClass="commontext"
                                  headerClass="order-table-header"
                                  rowClasses="order-table-odd-row,order-table-even-row"	

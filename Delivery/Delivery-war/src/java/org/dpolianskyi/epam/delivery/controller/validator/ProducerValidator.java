@@ -8,7 +8,7 @@ import javax.faces.validator.ValidatorException;
 
 @FacesValidator("producerValidator")
 public class ProducerValidator extends AbstractValidator {
-    
+
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         if (!validateProducer(value)) {

@@ -9,6 +9,7 @@ import javax.faces.model.ListDataModel;
 import org.dpolianskyi.epam.delivery.controller.dao.abstr.JpaDAOFactory;
 import org.dpolianskyi.epam.delivery.controller.dao.real.Curpro_RequestDAO;
 import org.dpolianskyi.epam.delivery.model.Curpro_Request;
+import org.dpolianskyi.epam.delivery.model.Request;
 import org.dpolianskyi.epam.delivery.paging.*;
 
 @ManagedBean(name = "requestStatusBean")
@@ -17,7 +18,8 @@ public class RequestStatusBean implements Serializable {
 
     private Pagination pagination = new Pagination(5, 0);
     private static final long serialVersionUID = 1L;
-    private DataModel<Curpro_Request> model;
+    private DataModel<Curpro_Request> modelDelivery;
+    private Request request;
     private Curpro_Request delivery;
     private Curpro_RequestDAO deliveryJPAController = null;
     private String selectedRow;
@@ -45,29 +47,37 @@ public class RequestStatusBean implements Serializable {
         this.delivery = delivery;
     }
 
-    public RequestStatusBean() {
-        deliveryJPAController = (Curpro_RequestDAO) JpaDAOFactory.getDAO(Curpro_Request.class);
-        model = new ListDataModel();
+    public Request getRequest() {
+        return request;
     }
 
-    public DataModel getModel() {
+    public void setRequest(Request request) {
+        this.request = request;
+    }
+
+    public RequestStatusBean() {
+        deliveryJPAController = (Curpro_RequestDAO) JpaDAOFactory.getDAO(Curpro_Request.class);
+        modelDelivery = new ListDataModel();
+    }
+
+    public DataModel getModelDelivery() {
         try {
-            PageController.updateModel(model, pagination, deliveryJPAController);
-            if ((model.getRowCount() < 1) && (pagination.isPossiblePrev())) {
+            PageController.updateModel(modelDelivery, pagination, deliveryJPAController);
+            if ((modelDelivery.getRowCount() < 1) && (pagination.isPossiblePrev())) {
                 movePrevPage();
             }
         } catch (Exception e) {
             LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
         }
-        return model;
+        return modelDelivery;
     }
 
     public String removeDelivery() {
-        Curpro_Request deliveryToRemove = model.getRowData();
+        Curpro_Request deliveryToRemove = modelDelivery.getRowData();
         Long deletedId = deliveryToRemove.getId();
         try {
             deliveryJPAController.remove(deliveryToRemove);
-            PageController.updateModel(model, pagination, deliveryJPAController);
+            PageController.updateModel(modelDelivery, pagination, deliveryJPAController);
             return PagesNS.PAGE_LIST_DELIVERY;//"list_delivery";
         } catch (Exception e) {
             LogBean.getLogger().error(REMOVEERROR + " " + deletedId + " " + java.util.Calendar.getInstance().getTime(), e);
@@ -88,7 +98,7 @@ public class RequestStatusBean implements Serializable {
             int currentPage = pagination.getCurrentPage();
             pagination.setCurrentPage(++currentPage);
             try {
-                PageController.updateModel(model, pagination, deliveryJPAController);
+                PageController.updateModel(modelDelivery, pagination, deliveryJPAController);
                 return PagesNS.PAGE_LIST_DELIVERY;//"list_delivery";
             } catch (Exception e) {
                 LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
@@ -106,7 +116,7 @@ public class RequestStatusBean implements Serializable {
                 pagination.setCurrentPage(--currentPage);
             }
             try {
-                PageController.updateModel(model, pagination, deliveryJPAController);
+                PageController.updateModel(modelDelivery, pagination, deliveryJPAController);
                 return PagesNS.PAGE_LIST_DELIVERY;//"list_delivery";
             } catch (Exception e) {
                 LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);

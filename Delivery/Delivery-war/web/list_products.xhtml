@@ -12,7 +12,11 @@
             <h:form> 
                 <div id="buttonContainer" class="commontext">
                     <h2 style="size: 15px; color: #212121">#{msg['productlist']}</h2>
-                    <h:dataTable value="#{requestBean.modelCurProduct}" var="item" styleClass="commontext" onclick="#{requestBean.modelCurProduct}">
+                    <h:dataTable value="#{requestBean.modelCurProduct}" var="item" 
+                                 styleClass="commontext"
+                                 headerClass="order-table-header"
+                                 rowClasses="order-table-odd-row,order-table-even-row"	
+                                 >
                         <h:column>
                             <f:facet name="header">#{msg['name']}</f:facet>
                             #{item.name}

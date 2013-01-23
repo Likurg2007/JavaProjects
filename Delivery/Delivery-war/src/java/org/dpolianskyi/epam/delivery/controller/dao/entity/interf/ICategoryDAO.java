@@ -13,5 +13,4 @@ public interface ICategoryDAO extends ICRUD<Category, Long> {
     public List<Category> findAll();
 
     public List<Category> findByName(String str);
-    
 }

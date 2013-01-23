@@ -38,16 +38,16 @@ public class CurProduct implements Serializable {
     private String description;
     @Column(name = "CURPRODUCT_IMPL_YEAR")
     private Integer year;
-    @ManyToOne(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "MODEL")
     private Model model;
-    @ManyToOne(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "PRODUCER")
     private Producer producer;
-    @ManyToOne(fetch= FetchType.EAGER, cascade = CascadeType.ALL)
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
     @JoinColumn(name = "CATEGORY")
     private Category category;
-    @OneToMany(mappedBy = "curproduct", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "curproduct")
     private List<Curpro_Request> curproreq = new LinkedList<Curpro_Request>();
 
     public CurProduct() {
@@ -184,6 +184,6 @@ public class CurProduct implements Serializable {
 
     @Override
     public String toString() {
-        return "CurProduct{" + "id=" + id  + ", name=" + name + ", description=" + description + ", year=" + year + ", model=" + model + ", producer=" + producer + ", category=" + category + '}';
+        return "CurProduct{" + "id=" + id + ", name=" + name + ", description=" + description + ", year=" + year + ", model=" + model + ", producer=" + producer + ", category=" + category + '}';
     }
 }

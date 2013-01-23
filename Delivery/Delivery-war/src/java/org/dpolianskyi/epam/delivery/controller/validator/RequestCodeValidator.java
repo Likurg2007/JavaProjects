@@ -13,11 +13,11 @@ import javax.faces.validator.ValidatorException;
 
 @FacesValidator("requestCodeValidator")
 public class RequestCodeValidator extends AbstractValidator {
-    
+
     public RequestCodeValidator() {
         pattern = Pattern.compile(REQUESTCODE_PATTERN);
     }
-    
+
     @Override
     public void validate(FacesContext context, UIComponent component, Object value) throws ValidatorException {
         if (!validateRequestCode(value)) {
