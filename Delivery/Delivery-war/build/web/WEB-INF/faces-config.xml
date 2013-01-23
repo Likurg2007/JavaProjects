@@ -15,6 +15,42 @@
             <var>msg</var>
         </resource-bundle>
     </application>
+    <navigation-rule>
+        <from-view-id>/index.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>requestpage</from-outcome>
+            <to-view-id>/list_requests.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/list_requests.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>deliverypage</from-outcome>
+            <to-view-id>/list_delivery.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>productpage</from-outcome>
+            <to-view-id>/list_products.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/list_products.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>requestpage</from-outcome>
+            <to-view-id>/list_requests.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>deliverypage</from-outcome>
+            <to-view-id>/list_delivery.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+    <navigation-rule>
+        <from-view-id>/list_delivery.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>requestpage</from-outcome>
+            <to-view-id>/list_requests.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
 </faces-config>
 
 
