@@ -52,6 +52,7 @@ public class Curpro_RequestDAO extends CRUD<Curpro_Request, Long> implements ICu
         }
     }
 
+    @Override
     public Curpro_Request findByProductId(final Long curpro_RequestProductID) {
         EntityManager entityManager = getEntityManager();
         Query query = entityManager.createQuery(querySequenceFindByProductId);

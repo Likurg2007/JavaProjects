@@ -38,7 +38,6 @@ public abstract class CRUD<E, K> implements ICRUD<E, K> {
     @Override
     public void remove(E entity) throws Exception {
         EntityManager entityManager = getEntityManager();
-        System.out.println("REMOVE (CRUD)");
         LogBean.getLogger().debug(REMOVEMSG + entity.getClass().getSimpleName() + " " + java.util.Calendar.getInstance().getTime());
         entityManager.getTransaction().begin();
         entityManager.remove(entityManager.merge(entity));

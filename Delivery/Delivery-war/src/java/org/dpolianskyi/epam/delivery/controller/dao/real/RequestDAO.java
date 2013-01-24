@@ -2,6 +2,7 @@ package org.dpolianskyi.epam.delivery.controller.dao.real;
 
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import org.dpolianskyi.epam.delivery.beans.LogBean;
@@ -21,10 +22,12 @@ public class RequestDAO extends CRUD<Request, Long> implements IRequestDAO {
     private final static String querySequenceFindByCode = "SELECT R FROM Request R WHERE R.code = :requestCode";
     private final static String querySequenceFindByStatus = "SELECT R FROM Request R WHERE R.status = :requestStatus";
     private final static String querySequenceFindByCredentials = "SELECT R FROM Request R WHERE R.credent = :requestCredentials";
+    private final static String querySequenceSelectRequestCount = "SELECT COUNT(R) FROM Request R";
     private final static String FINDALL = "Try to find all from: ";
     private final static String FINDBYCODE = "Try to find by code from: ";
     private final static String FINDBYSTATUS = "Try to find by status from: ";
     private final static String FINDBYCREDENTIALS = "Try to find by credentials from: ";
+    private final static String SELECTREQUESTCOUNT = "Try to select request count from: ";
 
     public RequestDAO() {
         super(Request.class);
@@ -79,6 +82,18 @@ public class RequestDAO extends CRUD<Request, Long> implements IRequestDAO {
             LogBean.getLogger().debug(FINDBYCREDENTIALS + entityManager.getClass());
             return (List<Request>) query.getResultList();
         } catch (NullPointerException e) {
+            return null;
+        }
+    }
+
+    @Override
+    public Long selectRequestCount() {
+        EntityManager entityManager = getEntityManager();
+        Query query = entityManager.createQuery(querySequenceSelectRequestCount);
+        try {
+            LogBean.getLogger().debug(SELECTREQUESTCOUNT + entityManager.getClass());
+            return (Long) query.getSingleResult();
+        } catch (NoResultException e) {
             return null;
         }
     }

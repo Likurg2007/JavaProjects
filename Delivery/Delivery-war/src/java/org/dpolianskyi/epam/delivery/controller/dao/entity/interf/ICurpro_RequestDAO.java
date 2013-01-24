@@ -13,4 +13,6 @@ public interface ICurpro_RequestDAO extends ICRUD<Curpro_Request, Long> {
     public List<Curpro_Request> findAll();
 
     public List<Curpro_Request> findByQuantity(Integer q);
+
+    public Curpro_Request findByProductId(final Long curpro_RequestProductID);
 }

@@ -16,7 +16,7 @@ import org.dpolianskyi.epam.delivery.paging.*;
 @SessionScoped
 public class RequestStatusBean implements Serializable {
 
-    private Pagination pagination = new Pagination(5, 0);
+    private Pagination pagination = new Pagination(5 , 0);
     private static final long serialVersionUID = 1L;
     private DataModel<Curpro_Request> modelDelivery;
     private Request request;

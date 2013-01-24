@@ -42,9 +42,6 @@ public class RequestBean implements Serializable {
     private final static String REMOVEERROR = "Error with removing of ";
     private final static String DELIVERYPAGE = "deliverypage";
     private final static String REQUESTPAGE = "requestpage";
-    private final static String PRODUCTPAGE = "productpage";
-
-    ;
 
     public void setDAO(RequestDAO dao) {
         this.requestJPAController = dao;
@@ -64,6 +61,11 @@ public class RequestBean implements Serializable {
 
     public void setRequest(Request request) {
         this.request = request;
+    }
+
+    public Long getRequestQuantity() {
+        System.out.println("CurQuantityReq:  " + requestJPAController.selectRequestCount());
+        return requestJPAController.selectRequestCount() / pagination.getRecordsOnPage() + 1;
     }
 
     public Request getCurRequest() {
@@ -116,7 +118,7 @@ public class RequestBean implements Serializable {
 
     public List<CurProduct> selectCurRequest() throws Exception {
         List<CurProduct> curProdList = new LinkedList<CurProduct>();
-        long curRequestId = curRequest.getId(); //1
+        long curRequestId = curRequest.getId(); 
         curRequest = requestJPAController.findById(curRequestId);
         curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
         for (Curpro_Request elem : getCurPro_Request()) {
@@ -164,25 +166,18 @@ public class RequestBean implements Serializable {
 
     public DataModel<CurProduct> getModelCurProduct() throws Exception {
         List<CurProduct> curProdList = new LinkedList<CurProduct>();
-        System.out.println("Create curProdList" + curProdList);
         long curRequestID = curRequest.getId();
-        System.out.println("curRequestID" + curRequestID);
         curRequest = requestJPAController.findById(curRequestID);
-        System.out.println("find Request: " + requestJPAController.findById(curRequestID));
         curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
-        System.out.println("Create curProRequest:  " + curPro_RequestList);
         for (Curpro_Request elem : getCurPro_Request()) {
             curProdList.add(elem.getCurrentProduct());
             elem.setRequest(curRequest);
-            System.out.println("CurPro_Request elems:   " + elem);
+            curPro_RequestJPAController.merge(elem);
         }
-        System.out.println("CurProdList:  " + curProdList);
         requestJPAController.merge(curRequest);
         modelCurProduct = new ListDataModel(curProdList);
-        System.out.println("ModelCurProduct:    " + modelCurProduct);
         try {
             PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
-            System.out.println("Merge curRequest:   ");
             if ((modelCurProduct.getRowCount() < 1) && (pagination.isPossiblePrev())) {
                 movePrevPageProduct();
             }
@@ -279,8 +274,15 @@ public class RequestBean implements Serializable {
     public String removeRequest() {
         Request requestToRemove = modelRequest.getRowData();
         Long deletedId = requestToRemove.getId();
+        Set<Curpro_Request> setCPR = requestToRemove.getCurrentProduct_Request();
         String deletedRequestCode = requestToRemove.getCode();
         try {
+            for (Curpro_Request elem : getCurPro_Request()) {
+                if (elem.getRequest().getId() == deletedId) {
+                    curPro_RequestJPAController.remove(elem);
+                    curProductJPAController.remove(elem.getCurrentProduct());
+                }
+            }
             requestJPAController.remove(requestToRemove);
             PageController.updateModel(modelRequest, pagination, requestJPAController);
             return PagesNS.PAGE_LIST_REQUESTS;
@@ -325,7 +327,6 @@ public class RequestBean implements Serializable {
         long curRequestId = curRequest.getId();
         curRequest = requestJPAController.findById(curRequestId);
         requestList.add(curRequest);
-        //requestJPAController.merge(curRequest);
         modelRequest = new ListDataModel(requestList);
         try {
             PageController.updateModel(modelRequest, pagination, requestJPAController);
@@ -381,8 +382,6 @@ public class RequestBean implements Serializable {
     }
 
     public void moveProductListPage() throws IOException, Exception {
-        System.out.println("modelRequest_CURRENT:  " + modelRequest.getRowData());
-        System.out.println("modelRequest_ALL:  " + modelRequest.getWrappedData());
         curRequest = modelRequest.getRowData();
         FacesContext.getCurrentInstance().getExternalContext().redirect("list_products.xhtml");
     }

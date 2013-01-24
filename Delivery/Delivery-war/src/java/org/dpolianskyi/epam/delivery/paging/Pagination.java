@@ -33,6 +33,7 @@ public class Pagination {
 
     public boolean isPossiblePrev() {
         return possiblePrev;
+        
     }
 
     public void setPossiblePrev(boolean possiblePrev) {

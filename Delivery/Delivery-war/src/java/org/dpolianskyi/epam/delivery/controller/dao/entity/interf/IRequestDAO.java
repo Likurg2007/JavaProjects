@@ -18,4 +18,6 @@ public interface IRequestDAO extends ICRUD<Request, Long> {
     public List<Request> findByStatus(StatusEnum st);
 
     public List<Request> findByCredentials(String str);
+    
+    public Long selectRequestCount();
 }
