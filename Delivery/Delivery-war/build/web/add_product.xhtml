@@ -12,21 +12,37 @@
             <center>
                 <div id="buttonContainer" class="commontext">
                     <h3><h:outputText value="#{msg['add_product_header']}"/></h3>
-                    <h:panelGrid columns="2">
+                    <h:panelGrid columns="3">
                         <h:outputLabel value="#{msg['name']}" />
-                        <h:inputText validator="modelValidator" value="#{requestBean.curProduct.name}"  required="true" />
+                        <h:inputText id="productname" value="#{requestBean.curProduct.name}"  required="true">
+                            <f:validator validatorId="modelValidator"/>
+                        </h:inputText>
+                        <h:messages for="productname" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
                         <h:outputLabel value="#{msg['model']}" />
-                        <h:inputText validator="modelValidator" value="#{requestBean.curModelName}"  required="true" />
+                        <h:inputText id="modelname" value="#{requestBean.curModelName}"  required="true">
+                            <f:validator validatorId="modelValidator"/>
+                        </h:inputText>
+                        <h:messages for="modelname" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
                         <h:outputLabel value="#{msg['year']}" />
-                        <h:inputText validator="yearValidator" value="#{requestBean.curProduct.year}"  required="false" />
+                        <h:inputText id="year" value="#{requestBean.curProduct.year}"  required="false">
+                            <f:validator validatorId="yearValidator"/>
+                        </h:inputText>
+                        <h:messages for="year" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
                         <h:outputLabel value="#{msg['description']}" />
-                        <h:inputText value="#{requestBean.curProduct.description}"  required="true" />
+                        <h:inputText value="#{requestBean.curProduct.description}"  required="true" style="margin: 5px;"/>
+                        <h:outputText value=""/>
                         <h:outputLabel value="#{msg['category']}" />
-                        <h:inputText validator="categoryValidator" value="#{requestBean.curCategoryName}"  required="true" />
+                        <h:inputText id="categoryname" value="#{requestBean.curCategoryName}"  required="true">
+                            <f:validator validatorId="categoryValidator"/>
+                        </h:inputText>
+                        <h:messages for="categoryname" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
                         <h:outputLabel value="#{msg['producer']}" />
-                        <h:inputText validator="producerValidator" value="#{requestBean.curProducerName}"  required="true" />
-                        <h:outputLabel value="#{msg['status_existence']}" />
-                        <h:selectOneRadio value="#{requestBean.curProduct.status}"> 
+                        <h:inputText id="producername" value="#{requestBean.curProducerName}"  required="true">
+                            <f:validator validatorId="producerValidator"/>
+                        </h:inputText>
+                        <h:messages for="producername" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
+                        <h:outputLabel value="#{msg['status_existence']}" style="margin-left:  5px;"/>
+                        <h:selectOneRadio value="#{requestBean.curProduct.status}">
                             <f:selectItem itemValue="STATUS_AVAILABLE" itemLabel="#{msg['goodsavail_true']}" />
                             <f:selectItem itemValue="STATUS_UNAVAILABLE" itemLabel="#{msg['goodsavail_false']}" />
                         </h:selectOneRadio>
