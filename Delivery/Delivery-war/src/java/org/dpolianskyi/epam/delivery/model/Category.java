@@ -1,8 +1,8 @@
 package org.dpolianskyi.epam.delivery.model;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -25,7 +25,7 @@ public class Category implements Serializable {
     @Column(name = "CATEGORY_DESCRIPTION")
     private String desc;
     @OneToMany(mappedBy = "category", cascade = CascadeType.ALL)
-    private Set<CurProduct> curproduct = new HashSet<CurProduct>();
+    private List<CurProduct> curproduct = new ArrayList<CurProduct>();
 
     public Category() {
     }
@@ -51,11 +51,11 @@ public class Category implements Serializable {
         this.desc = desc;
     }
 
-    public Set<CurProduct> getCurProductList() {
+    public List<CurProduct> getCurProductList() {
         return curproduct;
     }
 
-    public void setCurProductList(Set<CurProduct> curproduct) {
+    public void setCurProductList(List<CurProduct> curproduct) {
         this.curproduct = curproduct;
     }
 

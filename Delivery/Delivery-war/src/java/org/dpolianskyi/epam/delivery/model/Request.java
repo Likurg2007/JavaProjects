@@ -1,20 +1,18 @@
 package org.dpolianskyi.epam.delivery.model;
 
 import java.io.Serializable;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
-import javax.persistence.Transient;
 
 @Entity
 @Table(name = "REQUEST")
@@ -32,7 +30,7 @@ public class Request implements Serializable {
     @Enumerated(EnumType.STRING)
     private StatusEnum status;
     @OneToMany(mappedBy = "request", cascade = CascadeType.ALL)
-    private Set<Curpro_Request> curproreq = new HashSet<Curpro_Request>();
+    private List<Curpro_Request> curproreq = new ArrayList<Curpro_Request>();
 
     public Request() {
     }
@@ -68,11 +66,11 @@ public class Request implements Serializable {
         this.status = status;
     }
 
-    public Set<Curpro_Request> getCurrentProduct_Request() {
+    public List<Curpro_Request> getCurrentProduct_Request() {
         return curproreq;
     }
 
-    public void setCurrentProduct_Request(Set<Curpro_Request> curproreq) {
+    public void setCurrentProduct_Request(List<Curpro_Request> curproreq) {
         this.curproreq = curproreq;
     }
 

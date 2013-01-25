@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Set;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
@@ -118,7 +117,7 @@ public class RequestBean implements Serializable {
 
     public List<CurProduct> selectCurRequest() throws Exception {
         List<CurProduct> curProdList = new LinkedList<CurProduct>();
-        long curRequestId = curRequest.getId(); 
+        long curRequestId = curRequest.getId();
         curRequest = requestJPAController.findById(curRequestId);
         curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
         for (Curpro_Request elem : getCurPro_Request()) {
@@ -166,6 +165,7 @@ public class RequestBean implements Serializable {
 
     public DataModel<CurProduct> getModelCurProduct() throws Exception {
         List<CurProduct> curProdList = new LinkedList<CurProduct>();
+     //   System.out.println()
         long curRequestID = curRequest.getId();
         curRequest = requestJPAController.findById(curRequestID);
         curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
@@ -220,7 +220,7 @@ public class RequestBean implements Serializable {
             curProd.setModel(curModel);
             Curpro_Request curpro_Request = new Curpro_Request();
             curpro_Request.setCurrentProduct(curProd);
-            Set<Curpro_Request> setCPR = curRequest.getCurrentProduct_Request();
+            List<Curpro_Request> setCPR = curRequest.getCurrentProduct_Request();
             setCPR.add(curpro_Request);
             for (Curpro_Request elem : getCurPro_Request()) {
                 if (elem.getCurrentProduct().getId() == curProd.getId()) {
@@ -270,18 +270,41 @@ public class RequestBean implements Serializable {
             return "";
         }
     }
+//    public String removeRequest() {
+//        Request requestToRemove = modelRequest.getRowData();
+//        Long deletedId = requestToRemove.getId();
+//        List<Curpro_Request> setCPR = requestToRemove.getCurrentProduct_Request();
+//        String deletedRequestCode = requestToRemove.getCode();
+//        try {
+//            if (getCurPro_Request().isEmpty()) {
+//                requestJPAController.remove(requestToRemove);
+//            } else {
+//                for (Curpro_Request elem : getCurPro_Request()) {
+//                    if (elem.getRequest().getId() == deletedId) {
+//                        curPro_RequestJPAController.remove(elem);
+//                        curProductJPAController.remove(elem.getCurrentProduct());
+//                    }
+//                }
+//                requestJPAController.remove(requestToRemove);
+//            }
+//            PageController.updateModel(modelRequest, pagination, requestJPAController);
+//            return PagesNS.PAGE_LIST_REQUESTS;
+//        } catch (Exception e) {
+//            LogBean.getLogger().error(REMOVEERROR + " " + deletedId + "-" + deletedRequestCode + " " + java.util.Calendar.getInstance().getTime(), e);
+//            return "";
+//        }
+//    }
 
     public String removeRequest() {
         Request requestToRemove = modelRequest.getRowData();
         Long deletedId = requestToRemove.getId();
-        Set<Curpro_Request> setCPR = requestToRemove.getCurrentProduct_Request();
         String deletedRequestCode = requestToRemove.getCode();
+        List<Curpro_Request> setCPR = requestToRemove.getCurrentProduct_Request();
         try {
-            for (Curpro_Request elem : getCurPro_Request()) {
-                if (elem.getRequest().getId() == deletedId) {
-                    curPro_RequestJPAController.remove(elem);
-                    curProductJPAController.remove(elem.getCurrentProduct());
-                }
+            for (Curpro_Request elem : setCPR) {
+                CurProduct cp = elem.getCurrentProduct();
+                curPro_RequestJPAController.remove(elem);
+                curProductJPAController.remove(cp);
             }
             requestJPAController.remove(requestToRemove);
             PageController.updateModel(modelRequest, pagination, requestJPAController);
@@ -294,15 +317,24 @@ public class RequestBean implements Serializable {
 
     public String removeProduct() throws Exception {
         CurProduct productToRemove = modelCurProduct.getRowData();
+        System.out.println("productToRemove:  " + productToRemove);
         Long deletedId = productToRemove.getId();
+        System.out.println("deletedId:   " + deletedId);
         String deletedProductName = productToRemove.getName();
+        System.out.println("deletedProductName:   " + deletedProductName);
         try {
+            System.out.println("TRY");
             Curpro_Request curPro_Req = curPro_RequestJPAController.findByProductId(deletedId);
+            System.out.println("deletedcurPro_Req:   " + curPro_Req);
             curPro_RequestJPAController.remove(curPro_Req);
-            curProductJPAController.remove(productToRemove);
-            PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
+            System.out.println("REMOVE-1   ");
+//            curProductJPAController.remove(productToRemove);
+//            System.out.println("REMOVE-2   ");
+//            PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
+//            System.out.println("UPDATE");
             return PagesNS.PAGE_LIST_PRODUCTS;//"list_products";
         } catch (Exception e) {
+            System.out.println("CATCH");
             LogBean.getLogger().error(REMOVEERROR + " " + deletedId + "-" + deletedProductName + " " + java.util.Calendar.getInstance().getTime(), e);
             return "";
         }
