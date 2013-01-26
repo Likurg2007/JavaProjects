@@ -24,7 +24,7 @@ public class Model implements Serializable {
     private String name;
     @Column(name = "MODEL_DESCRIPTION")
     private String desc;
-    @OneToMany(mappedBy = "model", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "model")
     private List<CurProduct> curproduct = new ArrayList<CurProduct>();
 
     public Model() {

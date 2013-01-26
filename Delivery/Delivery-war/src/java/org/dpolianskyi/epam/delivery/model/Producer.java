@@ -24,7 +24,7 @@ public class Producer implements Serializable {
     private String name;
     @Column(name = "PRODUCER_DESCRIPTION")
     private String desc;
-    @OneToMany(mappedBy = "producer", cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "producer")
     private List<CurProduct> curproduct = new ArrayList<CurProduct>();
 
     public Producer() {

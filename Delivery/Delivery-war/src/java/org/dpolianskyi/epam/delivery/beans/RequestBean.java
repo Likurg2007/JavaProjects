@@ -165,17 +165,24 @@ public class RequestBean implements Serializable {
 
     public DataModel<CurProduct> getModelCurProduct() throws Exception {
         List<CurProduct> curProdList = new LinkedList<CurProduct>();
-     //   System.out.println()
-        long curRequestID = curRequest.getId();
-        curRequest = requestJPAController.findById(curRequestID);
+        System.out.println("List:   " + curProdList.isEmpty());
+        long curRequestId = curRequest.getId();
+        System.out.println("curRequestID:   " + curRequestId);
+        curRequest = requestJPAController.findById(curRequestId);
+        System.out.println("findRequest:   " + requestJPAController.findById(curRequestId));
         curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
-        for (Curpro_Request elem : getCurPro_Request()) {
-            curProdList.add(elem.getCurrentProduct());
-            elem.setRequest(curRequest);
-            curPro_RequestJPAController.merge(elem);
-        }
-        requestJPAController.merge(curRequest);
-        modelCurProduct = new ListDataModel(curProdList);
+        System.out.println("curPro_RequestList:  " + curPro_RequestList);
+        modelCurProduct = new ListDataModel();
+        modelCurProduct.setWrappedData(curProductJPAController.findByYear(2000));
+//        for (Curpro_Request elem : curPro_RequestList) {
+//            System.out.println("Elems:   " + elem);
+//            System.out.println("getCurProd:   " + elem.getCurrentProduct());
+//            curProdList.add(elem.getCurrentProduct());
+//            elem.setRequest(curRequest);
+//            curPro_RequestJPAController.merge(elem);
+//        }
+//        requestJPAController.merge(curRequest);
+//        modelCurProduct = new ListDataModel(curProdList);
         try {
             PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
             if ((modelCurProduct.getRowCount() < 1) && (pagination.isPossiblePrev())) {
@@ -215,17 +222,20 @@ public class RequestBean implements Serializable {
             Category curCategory = new Category(curCategoryName, null);
             Producer curProducer = new Producer(curProducerName, null);
             Model curModel = new Model(curModelName, null);
+            System.out.println("Category:   " + curCategoryName + "  Producer:   " + curProducerName + "  Model:   " + curModelName);
             curProd.setCategory(curCategory);
             curProd.setProducer(curProducer);
             curProd.setModel(curModel);
+            System.out.println("CurProd:   " + curProd);
             Curpro_Request curpro_Request = new Curpro_Request();
             curpro_Request.setCurrentProduct(curProd);
+            curpro_Request.setRequest(curRequest);
+            System.out.println("CurPro_Request:   " + curpro_Request);
             List<Curpro_Request> setCPR = curRequest.getCurrentProduct_Request();
+            System.out.println("SETCPR:   " + setCPR);
             setCPR.add(curpro_Request);
-            for (Curpro_Request elem : getCurPro_Request()) {
-                if (elem.getCurrentProduct().getId() == curProd.getId()) {
-                    curPro_RequestJPAController.persist(elem);
-                }
+            for (Curpro_Request elem : setCPR) {
+                curPro_RequestJPAController.persist(elem);
             }
             curRequest.setCurrentProduct_Request(setCPR);
             curProductJPAController.persist(curProd);

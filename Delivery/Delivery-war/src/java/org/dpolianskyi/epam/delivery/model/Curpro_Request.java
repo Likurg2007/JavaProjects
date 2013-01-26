@@ -23,7 +23,7 @@ public class Curpro_Request implements Serializable {
     @ManyToOne
     @JoinColumn(name = "REQUEST")
     private Request request;
-    @ManyToOne
+    @ManyToOne(cascade= CascadeType.ALL)
     @JoinColumn(name = "CURPRODUCT")
     private CurProduct curproduct;
     @Column(name = "CURPRO_QUANTITY")
