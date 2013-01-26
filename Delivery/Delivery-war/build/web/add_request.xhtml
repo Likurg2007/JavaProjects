@@ -17,7 +17,7 @@
                         <h:inputText id="code" value="#{requestBean.request.code}"  required="true">
                             <f:validator validatorId="requestCodeValidator" />
                         </h:inputText>   
-                        <h:messages for="code" style="color:red" />
+                        <h:messages for="code" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;" />
                         <h:outputLabel value="#{msg['full_name']}" />
                         <h:inputText value="#{requestBean.request.credentials}"  required="false" />
                         <h:outputLabel value=""/>
