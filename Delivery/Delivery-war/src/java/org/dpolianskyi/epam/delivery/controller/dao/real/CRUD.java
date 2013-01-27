@@ -56,15 +56,9 @@ public abstract class CRUD<E, K> implements ICRUD<E, K> {
             List<E> resultList = (List<E>) q.getResultList();
             return resultList;
         } catch (Exception e) {
-            //log.error(e);
+            LogBean.getLogger().debug(FINDMSG + " " + java.util.Calendar.getInstance().getTime());
             throw e;
-        } finally {
-            if (em != null) {
-                em.close();
-            }
-
-        }
-        //return null;
+        } 
     }
 
     @Override

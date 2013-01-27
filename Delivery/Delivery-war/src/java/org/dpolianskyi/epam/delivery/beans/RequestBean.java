@@ -164,36 +164,55 @@ public class RequestBean implements Serializable {
     }
 
     public DataModel<CurProduct> getModelCurProduct() throws Exception {
-        List<CurProduct> curProdList = new LinkedList<CurProduct>();
-        System.out.println("List:   " + curProdList.isEmpty());
-        long curRequestId = curRequest.getId();
-        System.out.println("curRequestID:   " + curRequestId);
-        curRequest = requestJPAController.findById(curRequestId);
-        System.out.println("findRequest:   " + requestJPAController.findById(curRequestId));
-        curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
-        System.out.println("curPro_RequestList:  " + curPro_RequestList);
-        modelCurProduct = new ListDataModel();
-        modelCurProduct.setWrappedData(curProductJPAController.findByYear(2000));
-//        for (Curpro_Request elem : curPro_RequestList) {
-//            System.out.println("Elems:   " + elem);
-//            System.out.println("getCurProd:   " + elem.getCurrentProduct());
-//            curProdList.add(elem.getCurrentProduct());
-//            elem.setRequest(curRequest);
-//            curPro_RequestJPAController.merge(elem);
-//        }
-//        requestJPAController.merge(curRequest);
-//        modelCurProduct = new ListDataModel(curProdList);
+//        modelCurProduct.setWrappedData(curProductJPAController.findEntities(true, 1, 0));
+//        System.out.println("WrappedData:  " + curProductJPAController.findByYear(2003));
+//        System.out.println("modelCurProduct:   " + modelCurProduct.getWrappedData());
         try {
+            System.out.println("TRY in getModelCurProduct:   ");
+            System.out.println("BEFORE UPDATE MODEL");
             PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
+            System.out.println("AFTER UPDATE MODEL");
             if ((modelCurProduct.getRowCount() < 1) && (pagination.isPossiblePrev())) {
+                System.out.println("IF in GMCP");
                 movePrevPageProduct();
             }
         } catch (Exception e) {
+            System.out.println("CATCH in GMCP");
             LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
         }
+        System.out.println("modelCurProduct:   " + modelCurProduct.getWrappedData());
         return modelCurProduct;
     }
 
+//    public DataModel<CurProduct> getModelCurProduct() throws Exception {
+//        List<CurProduct> curProdList = new LinkedList<CurProduct>();
+//        System.out.println("List:   " + curProdList.isEmpty());
+//        long curRequestId = curRequest.getId();
+//        System.out.println("curRequestID:   " + curRequestId);
+//        curRequest = requestJPAController.findById(curRequestId);
+//        System.out.println("findRequest:   " + requestJPAController.findById(curRequestId));
+//        curPro_RequestList = new LinkedList<Curpro_Request>(curRequest.getCurrentProduct_Request());
+//        System.out.println("curPro_RequestList:  " + curPro_RequestList);
+////        for (Curpro_Request elem : curPro_RequestList) {
+////            System.out.println("Elems:   " + elem);
+////            System.out.println("getCurProd:   " + elem.getCurrentProduct());
+////            curProdList.add(elem.getCurrentProduct());
+////            elem.setRequest(curRequest);
+////            curPro_RequestJPAController.merge(elem);
+////        }
+////        requestJPAController.merge(curRequest);
+//        modelCurProduct = new ListDataModel();
+//        modelCurProduct.setWrappedData(curProdList);
+//        try {
+//            PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
+//            if ((modelCurProduct.getRowCount() < 1) && (pagination.isPossiblePrev())) {
+//                movePrevPageProduct();
+//            }
+//        } catch (Exception e) {
+//            LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
+//        }
+//        return modelCurProduct;
+//    }
     public String setupAddRequest() {
         request = new Request();
         return PagesNS.PAGE_ADD_REQUEST;
@@ -222,23 +241,22 @@ public class RequestBean implements Serializable {
             Category curCategory = new Category(curCategoryName, null);
             Producer curProducer = new Producer(curProducerName, null);
             Model curModel = new Model(curModelName, null);
-            System.out.println("Category:   " + curCategoryName + "  Producer:   " + curProducerName + "  Model:   " + curModelName);
             curProd.setCategory(curCategory);
             curProd.setProducer(curProducer);
             curProd.setModel(curModel);
-            System.out.println("CurProd:   " + curProd);
             Curpro_Request curpro_Request = new Curpro_Request();
             curpro_Request.setCurrentProduct(curProd);
             curpro_Request.setRequest(curRequest);
             System.out.println("CurPro_Request:   " + curpro_Request);
-            List<Curpro_Request> setCPR = curRequest.getCurrentProduct_Request();
-            System.out.println("SETCPR:   " + setCPR);
-            setCPR.add(curpro_Request);
-            for (Curpro_Request elem : setCPR) {
-                curPro_RequestJPAController.persist(elem);
-            }
-            curRequest.setCurrentProduct_Request(setCPR);
-            curProductJPAController.persist(curProd);
+            curPro_RequestJPAController.persist(curpro_Request);
+//            List<Curpro_Request> setCPR = curRequest.getCurrentProduct_Request();
+//            System.out.println("SETCPR:   " + setCPR);
+//            setCPR.add(curpro_Request);
+//            for (Curpro_Request elem : setCPR) {
+//                curPro_RequestJPAController.persist(elem);
+//            }
+//            curRequest.setCurrentProduct_Request(setCPR);
+            curProductJPAController.merge(curProd);
             requestJPAController.merge(curRequest);
             PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
             return PagesNS.PAGE_LIST_PRODUCTS;
