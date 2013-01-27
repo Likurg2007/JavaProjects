@@ -38,13 +38,13 @@ public enum StatusEnum {
         if (status != null) {
             switch (status) {
                 case STATUS_AVAILABLE:
-                    return "Undefined";
+                    return "Available";
                 case STATUS_UNAVAILABLE:
-                    return "Requested";
+                    return "Unavailable";
                 case STATUS_PAID:
-                    return "In Process";
+                    return "Paid";
                 case STATUS_UNPAID:
-                    return "Canceled";
+                    return "Unpaid";
                 default:
                     return "Undefined";
             }
