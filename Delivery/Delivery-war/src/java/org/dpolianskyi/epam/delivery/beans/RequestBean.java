@@ -63,8 +63,12 @@ public class RequestBean implements Serializable {
     }
 
     public Long getRequestQuantity() {
-        System.out.println("CurQuantityReq:  " + requestJPAController.selectRequestCount());
         return requestJPAController.selectRequestCount() / pagination.getRecordsOnPage() + 1;
+    }
+
+    public Long getProductQuantity() {
+        System.out.println("GPQ:   " + curProductJPAController.selectProductQuantityOfCurrentRequest(curRequest));
+        return curProductJPAController.selectProductQuantityOfCurrentRequest(curRequest) / pagination.getRecordsOnPage() + 1;
     }
 
     public Request getCurRequest() {
@@ -164,23 +168,16 @@ public class RequestBean implements Serializable {
     }
 
     public DataModel<CurProduct> getModelCurProduct() throws Exception {
-//        modelCurProduct.setWrappedData(curProductJPAController.findEntities(true, 1, 0));
-//        System.out.println("WrappedData:  " + curProductJPAController.findByYear(2003));
-//        System.out.println("modelCurProduct:   " + modelCurProduct.getWrappedData());
         try {
-            System.out.println("TRY in getModelCurProduct:   ");
-            System.out.println("BEFORE UPDATE MODEL");
-            PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
-            System.out.println("AFTER UPDATE MODEL");
+            System.out.println("BEFORE UPDATE:   ");
+            PageController.updateModel(modelCurProduct, pagination, curProductJPAController, curRequest);
+            System.out.println("AFTER UPDATE:   ");
             if ((modelCurProduct.getRowCount() < 1) && (pagination.isPossiblePrev())) {
-                System.out.println("IF in GMCP");
                 movePrevPageProduct();
             }
         } catch (Exception e) {
-            System.out.println("CATCH in GMCP");
             LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
         }
-        System.out.println("modelCurProduct:   " + modelCurProduct.getWrappedData());
         return modelCurProduct;
     }
 
@@ -247,7 +244,6 @@ public class RequestBean implements Serializable {
             Curpro_Request curpro_Request = new Curpro_Request();
             curpro_Request.setCurrentProduct(curProd);
             curpro_Request.setRequest(curRequest);
-            System.out.println("CurPro_Request:   " + curpro_Request);
             curPro_RequestJPAController.persist(curpro_Request);
 //            List<Curpro_Request> setCPR = curRequest.getCurrentProduct_Request();
 //            System.out.println("SETCPR:   " + setCPR);
@@ -345,24 +341,13 @@ public class RequestBean implements Serializable {
 
     public String removeProduct() throws Exception {
         CurProduct productToRemove = modelCurProduct.getRowData();
-        System.out.println("productToRemove:  " + productToRemove);
         Long deletedId = productToRemove.getId();
-        System.out.println("deletedId:   " + deletedId);
         String deletedProductName = productToRemove.getName();
-        System.out.println("deletedProductName:   " + deletedProductName);
         try {
-            System.out.println("TRY");
             Curpro_Request curPro_Req = curPro_RequestJPAController.findByProductId(deletedId);
-            System.out.println("deletedcurPro_Req:   " + curPro_Req);
             curPro_RequestJPAController.remove(curPro_Req);
-            System.out.println("REMOVE-1   ");
-//            curProductJPAController.remove(productToRemove);
-//            System.out.println("REMOVE-2   ");
-//            PageController.updateModel(modelCurProduct, pagination, curProductJPAController);
-//            System.out.println("UPDATE");
             return PagesNS.PAGE_LIST_PRODUCTS;//"list_products";
         } catch (Exception e) {
-            System.out.println("CATCH");
             LogBean.getLogger().error(REMOVEERROR + " " + deletedId + "-" + deletedProductName + " " + java.util.Calendar.getInstance().getTime(), e);
             return "";
         }

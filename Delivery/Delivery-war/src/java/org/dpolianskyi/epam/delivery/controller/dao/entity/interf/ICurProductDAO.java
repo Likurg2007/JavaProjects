@@ -25,6 +25,8 @@ public interface ICurProductDAO extends ICRUD<CurProduct, Long> {
     public List<CurProduct> findByProducerName(final String producerName);
 
     public List<CurProduct> findByYear(final Integer productListYear);
-    
+
     public List<CurProduct> findEntities(boolean all, int maxResults, int firstResult, Request request) throws Exception;
+    
+    public Long selectProductQuantityOfCurrentRequest(Request request);
 }

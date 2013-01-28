@@ -62,9 +62,9 @@
             </h:form>  
             <h:form>
                 <h:panelGrid columns="3" >
-                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.requestQuantity}" action="#{requestBean.movePrevPageProduct()}" disabled="#{!requestBean.pagination.possiblePrev}"/>
+                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.productQuantity}" action="#{requestBean.movePrevPageProduct()}" disabled="#{!requestBean.pagination.possiblePrev}"/>
                     <h:commandLink hreflang="#" class="button small green" value="#{msg['add_product']}" action="#{requestBean.setupAddProduct()}"/>
-                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.requestQuantity}" action="#{requestBean.moveNextPageProduct()}" disabled="#{!requestBean.pagination.possibleNext}"/>
+                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.productQuantity}" action="#{requestBean.moveNextPageProduct()}" disabled="#{!requestBean.pagination.possibleNext}"/>
                 </h:panelGrid>   
             </h:form>
         </center>

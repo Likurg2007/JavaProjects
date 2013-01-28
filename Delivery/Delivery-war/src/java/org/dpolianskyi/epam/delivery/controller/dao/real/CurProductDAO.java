@@ -1,7 +1,9 @@
 package org.dpolianskyi.epam.delivery.controller.dao.real;
 
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 import org.dpolianskyi.epam.delivery.beans.LogBean;
@@ -23,8 +25,9 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
     private final static String querySequenceFindByModelName = "SELECT CP FROM CurProduct CP WHERE CP.model.name = :modelName";
     private final static String querySequenceFindByProducerName = "SELECT CP FROM CurProduct CP WHERE CP.producer.name = :producerName";
     private final static String querySequenceFindByYear = "SELECT CP FROM CurProduct CP WHERE CP.year = :curProductYear";
-    private final static String querySequenceFindEntitiesByCurrentRequest = "SELECT CP FROM CurProduct CP INNER JOIN Curpro_Request CR ON CP.id = CR.curproduct INNER JOIN Request R ON R.id = CR.request WHERE CR.request = :curRequest";
-    private final static String nativeQuerySequenceFindEntitiesByCurrentRequest = "SELECT * FROM CURPRODUCT INNER JOIN CURPRODUCT_REQUEST ON CURPRODUCT.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST WHERE CURPRODUCT_REQUEST.REQUEST=17";
+    //   private final static String querySequenceFindEntitiesByCurrentRequest = "SELECT CP.curproduct FROM Request R IN (R.curproreq) CP";
+    private final static String nativeQuerySequenceFindEntitiesByCurrentRequest = "SELECT CP.CURPRODUCT_ID FROM CURPRODUCT AS CP INNER JOIN CURPRODUCT_REQUEST ON CP.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST	WHERE CURPRODUCT_REQUEST.REQUEST= ?";
+    private final static String nativeQuerySequenceSelectProductOfCurrentRequest = "SELECT COUNT(CP.CURPRODUCT_ID) FROM CURPRODUCT AS CP INNER JOIN CURPRODUCT_REQUEST ON CP.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST	WHERE CURPRODUCT_REQUEST.REQUEST= ?";
     private final static String FINDALL = "Try to find all from: ";
     private final static String FINDBYSTATUS = "Try to find by status from: ";
     private final static String FINDBYNAME = "Try to find by name from: ";
@@ -33,6 +36,7 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
     private final static String FINDBYPRODUCER = "Try to find by producer name from: ";
     private final static String FINDBYYEAR = "Try to find by year from: ";
     private final static String FINDMSG = "Try to find from range: ";
+    private final static String SELECTPRODUCTCOUNT = "Try to select product count from: ";
 
     public CurProductDAO() {
         super(CurProduct.class);
@@ -131,21 +135,45 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
     }
 
     @Override
+    public Long selectProductQuantityOfCurrentRequest(Request request) {
+        EntityManager entityManager = getEntityManager();
+        Long requestId = request.getId();
+        Query nquery = entityManager.createNativeQuery(nativeQuerySequenceFindEntitiesByCurrentRequest);
+        nquery.setParameter(1, requestId);
+        try {
+            List resultListId = nquery.getResultList();
+            Long pageCounter = new Long(resultListId.size());
+            LogBean.getLogger().debug(SELECTPRODUCTCOUNT + entityManager.getClass());
+            System.out.println("RESULT:   " + (Long) nquery.getSingleResult());
+            return pageCounter;
+        } catch (NoResultException e) {
+            return null;
+        }
+    }
+
+    @Override
     public List<CurProduct> findEntities(boolean all, int maxResults, int firstResult, Request request) throws Exception {
         EntityManager entityManager = getEntityManager();
+        CurProductDAO cpdao = new CurProductDAO();
+        CurProduct cp;
+        Long resultIdLong;
+        Long requestId = request.getId();
         Query nquery = entityManager.createNativeQuery(nativeQuerySequenceFindEntitiesByCurrentRequest);
+        nquery.setParameter(1, requestId);
         try {
-            System.out.println("TRY in FE");
             if (!all) {
-                System.out.println("IF in FE");
                 nquery.setMaxResults(maxResults);
                 nquery.setFirstResult(firstResult);
             }
-            List<CurProduct> resultList = (List<CurProduct>) nquery.getResultList();
-            System.out.println("BEFORE FOR" + resultList.isEmpty() + " " + resultList.size());
+            List resultListId = nquery.getResultList();
+            List<CurProduct> resultList = new ArrayList<CurProduct>();
+            for (Object elem : resultListId) {
+                resultIdLong = Long.parseLong(elem.toString());
+                cp = cpdao.findById(resultIdLong);
+                resultList.add(cp);
+            }
             return resultList;
         } catch (NullPointerException e) {
-            System.out.println("CATCH in FE");
             LogBean.getLogger().debug(FINDMSG + " " + java.util.Calendar.getInstance().getTime());
             return null;
         }
