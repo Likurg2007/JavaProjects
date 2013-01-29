@@ -18,6 +18,11 @@ public interface IRequestDAO extends ICRUD<Request, Long> {
     public List<Request> findByStatus(StatusEnum st);
 
     public List<Request> findByCredentials(String str);
-    
+
     public Long selectRequestCount();
+    
+    public Long selectDeliveryCount();
+
+    public List<Request> findEntitiesWithAvailableStatus(boolean all, int maxResults, int firstResult) throws Exception;
+    
 }

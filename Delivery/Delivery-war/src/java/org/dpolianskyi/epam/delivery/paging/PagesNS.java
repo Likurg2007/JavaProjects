@@ -15,5 +15,6 @@ public class PagesNS {
     public static final String PAGE_ADD_REQUEST = "add_request";
     public static final String PAGE_ADD_PRODUCT = "add_product";
     public static final String PAGE_LIST_DELIVERY = "list_delivery";
+    public static final String PAGE_EDIT_DELIVERY ="edit_delivery";
     public static final String PAGE_SETTINGS = "settings";
 }

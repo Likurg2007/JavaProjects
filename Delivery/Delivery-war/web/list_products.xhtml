@@ -55,16 +55,16 @@
 
                     <h:panelGrid columns="3">
                         <h:commandLink hreflang="#" class="button small gray" action="#{requestBean.moveRequestPage()}" value="#{msg['move_requests']}" />
-                        <h:commandLink hreflang="#" class="button small green" action="#{requestBean.moveDeliveryPage()}" value="#{msg['confirm_order']}" />
+                        <h:commandLink hreflang="#" class="button small green" action="#{requestBean.moveDeliveryPageConfirm()}" value="#{msg['confirm_order']}" />
                         <h:commandLink hreflang="#" class="button small gray" action="#{requestBean.moveDeliveryPage()}" value="#{msg['move_delivery']}" />
                     </h:panelGrid>
                 </div>
             </h:form>  
             <h:form>
                 <h:panelGrid columns="3" >
-                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.productQuantity}" action="#{requestBean.movePrevPageProduct()}" disabled="#{!requestBean.pagination.possiblePrev}"/>
+                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.productQuantity}" action="#{requestBean.movePrevPageProduct()}" rendered="#{requestBean.pagination.possiblePrev}"/>
                     <h:commandLink hreflang="#" class="button small green" value="#{msg['add_product']}" action="#{requestBean.setupAddProduct()}"/>
-                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.productQuantity}" action="#{requestBean.moveNextPageProduct()}" disabled="#{!requestBean.pagination.possibleNext}"/>
+                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.productQuantity}" action="#{requestBean.moveNextPageProduct()}" rendered="#{requestBean.pagination.possibleNext}"/>
                 </h:panelGrid>   
             </h:form>
         </center>

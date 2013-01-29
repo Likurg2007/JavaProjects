@@ -40,9 +40,9 @@
             </h:form>
             <h:form>
                 <h:panelGrid columns="3">
-                    <h:commandLink hreflang="#" class="button small gray"  value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.requestQuantity}" action="#{requestBean.movePrevPageRequest()}" disabled="#{!requestBean.pagination.possiblePrev}"/>
+                    <h:commandLink hreflang="#" class="button small gray"  value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.requestQuantity}" action="#{requestBean.movePrevPageRequest()}" rendered="#{requestBean.pagination.possiblePrev}"/>
                     <h:commandLink  hreflang="#" class="button small green" value="#{msg['add_order']}" action="#{requestBean.setupAddRequest()}"/>
-                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.requestQuantity}" action="#{requestBean.moveNextPageRequest()}" disabled="#{!requestBean.pagination.possibleNext}"/>   
+                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.requestQuantity}" action="#{requestBean.moveNextPageRequest()}" rendered="#{requestBean.pagination.possibleNext}"/>   
                 </h:panelGrid>
             </h:form>
         </center>

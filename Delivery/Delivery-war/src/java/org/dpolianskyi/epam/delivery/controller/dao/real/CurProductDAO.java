@@ -1,6 +1,7 @@
 package org.dpolianskyi.epam.delivery.controller.dao.real;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.NoResultException;
@@ -26,8 +27,14 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
     private final static String querySequenceFindByProducerName = "SELECT CP FROM CurProduct CP WHERE CP.producer.name = :producerName";
     private final static String querySequenceFindByYear = "SELECT CP FROM CurProduct CP WHERE CP.year = :curProductYear";
     //   private final static String querySequenceFindEntitiesByCurrentRequest = "SELECT CP.curproduct FROM Request R IN (R.curproreq) CP";
-    private final static String nativeQuerySequenceFindEntitiesByCurrentRequest = "SELECT CP.CURPRODUCT_ID FROM CURPRODUCT AS CP INNER JOIN CURPRODUCT_REQUEST ON CP.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST	WHERE CURPRODUCT_REQUEST.REQUEST= ?";
-    private final static String nativeQuerySequenceSelectProductOfCurrentRequest = "SELECT COUNT(CP.CURPRODUCT_ID) FROM CURPRODUCT AS CP INNER JOIN CURPRODUCT_REQUEST ON CP.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST	WHERE CURPRODUCT_REQUEST.REQUEST= ?";
+    private final static String nativeQuerySequenceFindEntitiesByCurrentRequest = "SELECT CP.CURPRODUCT_ID FROM CURPRODUCT AS CP "
+            + "INNER JOIN CURPRODUCT_REQUEST ON CP.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT "
+            + "INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST	"
+            + "WHERE CURPRODUCT_REQUEST.REQUEST= ?";
+    private final static String nativeQuerySequenceFindStatusEntitiesByCurrentRequest = "SELECT CP.CURPRODUCT_STATUS FROM CURPRODUCT AS CP "
+            + "INNER JOIN CURPRODUCT_REQUEST ON CP.CURPRODUCT_ID=CURPRODUCT_REQUEST.CURPRODUCT "
+            + "INNER JOIN REQUEST ON REQUEST.REQUEST_ID = CURPRODUCT_REQUEST.REQUEST "
+            + "WHERE CURPRODUCT_REQUEST.REQUEST= ?";
     private final static String FINDALL = "Try to find all from: ";
     private final static String FINDBYSTATUS = "Try to find by status from: ";
     private final static String FINDBYNAME = "Try to find by name from: ";
@@ -37,6 +44,9 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
     private final static String FINDBYYEAR = "Try to find by year from: ";
     private final static String FINDMSG = "Try to find from range: ";
     private final static String SELECTPRODUCTCOUNT = "Try to select product count from: ";
+    private final static String GETSTATUS = "Try to get complex status of current product list from: ";
+    private final static String sA = "STATUS_AVAILABLE";
+    private Integer pageCounter;
 
     public CurProductDAO() {
         super(CurProduct.class);
@@ -135,20 +145,43 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
     }
 
     @Override
-    public Long selectProductQuantityOfCurrentRequest(Request request) {
+    public Long selectProductQuantityOfCurrentRequest(Request request) throws Exception {
         EntityManager entityManager = getEntityManager();
+        Long resultListIdSize;
         Long requestId = request.getId();
         Query nquery = entityManager.createNativeQuery(nativeQuerySequenceFindEntitiesByCurrentRequest);
         nquery.setParameter(1, requestId);
         try {
             List resultListId = nquery.getResultList();
-            Long pageCounter = new Long(resultListId.size());
-            LogBean.getLogger().debug(SELECTPRODUCTCOUNT + entityManager.getClass());
-            System.out.println("RESULT:   " + (Long) nquery.getSingleResult());
-            return pageCounter;
-        } catch (NoResultException e) {
+            resultListIdSize = new Long(resultListId.size() - 1);
+            System.out.println("resultListIdSize:   " + resultListIdSize);
+            return resultListIdSize;
+        } catch (NullPointerException e) {
+            LogBean.getLogger().debug(FINDMSG + " " + java.util.Calendar.getInstance().getTime());
             return null;
         }
+    }
+
+    @Override
+    public Boolean defStatusOfCurrentProducts(Request request) {
+        Boolean concStatusFlag = true;
+        EntityManager entityManager = getEntityManager();
+        Long requestId = request.getId();
+        Query nquery = entityManager.createNativeQuery(nativeQuerySequenceFindStatusEntitiesByCurrentRequest);
+        nquery.setParameter(1, requestId);
+        try {
+            List resultListStatus = nquery.getResultList();
+            for (Object st : resultListStatus) {
+                if (!st.toString().equals(sA)) {
+                    concStatusFlag = false;
+                }
+            }
+            return concStatusFlag;
+        } catch (NullPointerException e) {
+            LogBean.getLogger().debug(GETSTATUS + " " + java.util.Calendar.getInstance().getTime());
+            return null;
+        }
+
     }
 
     @Override

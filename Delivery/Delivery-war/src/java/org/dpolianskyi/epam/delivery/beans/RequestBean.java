@@ -24,6 +24,7 @@ public class RequestBean implements Serializable {
     private static final long serialVersionUID = 1L;
     private DataModel<Request> modelRequest;
     private DataModel<CurProduct> modelCurProduct;
+    private DataModel<Request> modelDelivery;
     private List<Curpro_Request> curPro_RequestList;
     private Request request;
     private Request curRequest;
@@ -34,13 +35,11 @@ public class RequestBean implements Serializable {
     private String curModelName;
     private String curProducerName;
     private String curCategoryName;
-    private Boolean confirmStatus = false;
     private final static String PAGINATIONERROR = "Something caused the error of pagging";
     private final static String CREATEERROR = "Error with creating of ";
     private final static String EDITERROR = "Error with editing of ";
     private final static String REMOVEERROR = "Error with removing of ";
-    private final static String DELIVERYPAGE = "deliverypage";
-    private final static String REQUESTPAGE = "requestpage";
+    private final static String CONFIRMERROR = "Error with confirming of ";
 
     public void setDAO(RequestDAO dao) {
         this.requestJPAController = dao;
@@ -66,9 +65,22 @@ public class RequestBean implements Serializable {
         return requestJPAController.selectRequestCount() / pagination.getRecordsOnPage() + 1;
     }
 
-    public Long getProductQuantity() {
-        System.out.println("GPQ:   " + curProductJPAController.selectProductQuantityOfCurrentRequest(curRequest));
+    public Long getProductQuantity() throws Exception {
         return curProductJPAController.selectProductQuantityOfCurrentRequest(curRequest) / pagination.getRecordsOnPage() + 1;
+    }
+
+    public Long getDeliveryQuantity() {
+        System.out.println("DELIVERYQUANTITY:   " + requestJPAController.selectDeliveryCount() + "   PAGIN:  " + pagination.getRecordsOnPage());
+        return requestJPAController.selectDeliveryCount() / pagination.getRecordsOnPage() + 1;
+    }
+    
+    public String getProductListStatus() {
+        Boolean confirmStatatus = curProductJPAController.defStatusOfCurrentProducts(curRequest);
+        if (confirmStatatus == true) {
+            return PagesNS.PAGE_LIST_DELIVERY;
+        } else {
+            return PagesNS.PAGE_LIST_PRODUCTS;
+        }
     }
 
     public Request getCurRequest() {
@@ -117,6 +129,7 @@ public class RequestBean implements Serializable {
         curPro_RequestJPAController = (Curpro_RequestDAO) JpaDAOFactory.getDAO(Curpro_Request.class);
         modelRequest = new ListDataModel();
         modelCurProduct = new ListDataModel();
+        modelDelivery = new ListDataModel();
     }
 
     public List<CurProduct> selectCurRequest() throws Exception {
@@ -167,6 +180,24 @@ public class RequestBean implements Serializable {
         return modelRequest;
     }
 
+    public DataModel<Request> getModelDelivery() {
+        try {
+            System.out.println("TRY");
+            PageController.updateModelCondition(modelDelivery, pagination, requestJPAController);
+            if ((modelDelivery.getRowCount() < 1) && (pagination.isPossiblePrev())) {
+                movePrevPageRequest();
+            }
+        } catch (Exception e) {
+            LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
+        }
+        return modelDelivery;
+    }
+
+    public DataModel<Request> getEditedModelDelivery() {
+        modelDelivery = getModelDelivery();
+        return modelDelivery;
+    }
+
     public DataModel<CurProduct> getModelCurProduct() throws Exception {
         try {
             System.out.println("BEFORE UPDATE:   ");
@@ -213,6 +244,11 @@ public class RequestBean implements Serializable {
     public String setupAddRequest() {
         request = new Request();
         return PagesNS.PAGE_ADD_REQUEST;
+    }
+
+    public String setupEditDelivery() {
+        request = modelDelivery.getRowData();
+        return PagesNS.PAGE_EDIT_DELIVERY;
     }
 
     public String setupEditRequest() {
@@ -294,6 +330,19 @@ public class RequestBean implements Serializable {
             return "";
         }
     }
+
+    public String editDelivery() {
+        FacesContext facesContext = FacesContext.getCurrentInstance();
+        try {
+            requestJPAController.merge(request);
+            PageController.updateModel(modelDelivery, pagination, requestJPAController);
+            return PagesNS.PAGE_LIST_DELIVERY;
+        } catch (Exception e) {
+            LogBean.getLogger().error(EDITERROR + " " + request.getId() + "-" + request.getCode() + " " + java.util.Calendar.getInstance().getTime(), e);
+            return "";
+        }
+    }
+
 //    public String removeRequest() {
 //        Request requestToRemove = modelRequest.getRowData();
 //        Long deletedId = requestToRemove.getId();
@@ -318,7 +367,6 @@ public class RequestBean implements Serializable {
 //            return "";
 //        }
 //    }
-
     public String removeRequest() {
         Request requestToRemove = modelRequest.getRowData();
         Long deletedId = requestToRemove.getId();
@@ -339,6 +387,46 @@ public class RequestBean implements Serializable {
         }
     }
 
+    public String removeDelivery() {
+        Request requestToRemove = modelDelivery.getRowData();
+        Long deletedId = requestToRemove.getId();
+        String deletedRequestCode = requestToRemove.getCode();
+        List<Curpro_Request> setCPR = requestToRemove.getCurrentProduct_Request();
+        try {
+            for (Curpro_Request elem : setCPR) {
+                CurProduct cp = elem.getCurrentProduct();
+                curPro_RequestJPAController.remove(elem);
+                curProductJPAController.remove(cp);
+            }
+            requestJPAController.remove(requestToRemove);
+            PageController.updateModel(modelDelivery, pagination, requestJPAController);
+            return PagesNS.PAGE_LIST_DELIVERY;
+        } catch (Exception e) {
+            LogBean.getLogger().error(REMOVEERROR + " " + deletedId + "-" + deletedRequestCode + " " + java.util.Calendar.getInstance().getTime(), e);
+            return "";
+        }
+    }
+
+    public String confirmDelivery() {
+        Request requestToRemove = modelDelivery.getRowData();
+        Long deletedId = requestToRemove.getId();
+        String deletedRequestCode = requestToRemove.getCode();
+        List<Curpro_Request> setCPR = requestToRemove.getCurrentProduct_Request();
+        try {
+            for (Curpro_Request elem : setCPR) {
+                CurProduct cp = elem.getCurrentProduct();
+                curPro_RequestJPAController.remove(elem);
+                curProductJPAController.remove(cp);
+            }
+            requestJPAController.remove(requestToRemove);
+            PageController.updateModel(modelDelivery, pagination, requestJPAController);
+            return PagesNS.PAGE_LIST_DELIVERY;
+        } catch (Exception e) {
+            LogBean.getLogger().error(CONFIRMERROR + " " + deletedId + "-" + deletedRequestCode + " " + java.util.Calendar.getInstance().getTime(), e);
+            return "";
+        }
+    }
+
     public String removeProduct() throws Exception {
         CurProduct productToRemove = modelCurProduct.getRowData();
         Long deletedId = productToRemove.getId();
@@ -353,37 +441,22 @@ public class RequestBean implements Serializable {
         }
     }
 
-    public Boolean isConfirmed() {
-        for (Curpro_Request elem : getCurPro_Request()) {
-            if (elem.getCurrentProduct().getId() == curProd.getId()) {
-                {
-                    if ((elem.getCurrentProduct().getStatus() == StatusEnum.STATUS_AVAILABLE)) {
-                        confirmStatus = true;
-                        System.out.println("confirmStatus:   " + confirmStatus);
-                    }
-                }
-            }
-        }
-        return confirmStatus;
-    }
-
-    public DataModel<Request> confirmRequest() throws Exception {
-        List<Request> requestList = new LinkedList<Request>();
-        long curRequestId = curRequest.getId();
-        curRequest = requestJPAController.findById(curRequestId);
-        requestList.add(curRequest);
-        modelRequest = new ListDataModel(requestList);
-        try {
-            PageController.updateModel(modelRequest, pagination, requestJPAController);
-            if ((modelRequest.getRowCount() < 1) && (pagination.isPossiblePrev())) {
-                movePrevPageProduct();
-            }
-        } catch (Exception e) {
-            LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
-        }
-        return modelRequest;
-    }
-
+//    public DataModel<Request> confirmRequest() throws Exception {
+//        List<Request> requestList = new LinkedList<Request>();
+//        long curRequestId = curRequest.getId();
+//        curRequest = requestJPAController.findById(curRequestId);
+//        requestList.add(curRequest);
+//        modelRequest = new ListDataModel(requestList);
+//        try {
+//            PageController.updateModel(modelRequest, pagination, requestJPAController);
+//            if ((modelRequest.getRowCount() < 1) && (pagination.isPossiblePrev())) {
+//                movePrevPageProduct();
+//            }
+//        } catch (Exception e) {
+//            LogBean.getLogger().error(PAGINATIONERROR + " " + java.util.Calendar.getInstance().getTime(), e);
+//        }
+//        return modelRequest;
+//    }
     public Pagination getPagination() {
         return pagination;
     }
@@ -426,9 +499,9 @@ public class RequestBean implements Serializable {
         }
     }
 
-    public void moveProductListPage() throws IOException, Exception {
+    public String moveProductListPage() throws IOException, Exception {
         curRequest = modelRequest.getRowData();
-        FacesContext.getCurrentInstance().getExternalContext().redirect("list_products.xhtml");
+        return PagesNS.PAGE_LIST_PRODUCTS;
     }
 
     public String setupAddProduct() {
@@ -475,11 +548,15 @@ public class RequestBean implements Serializable {
         }
     }
 
-    public String moveDeliveryPage() throws IOException, Exception {
-        return DELIVERYPAGE;
+    public String moveDeliveryPageConfirm() {
+        return getProductListStatus();
     }
 
-    public String moveRequestPage() throws IOException {
-        return REQUESTPAGE;
+    public String moveDeliveryPage() {
+        return PagesNS.PAGE_LIST_DELIVERY;
+    }
+
+    public String moveRequestPage() {
+        return PagesNS.PAGE_LIST_REQUESTS;
     }
 }
