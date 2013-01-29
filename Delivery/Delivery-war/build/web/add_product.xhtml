@@ -42,7 +42,7 @@
                         </h:inputText>
                         <h:messages for="producername" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
                         <h:outputLabel value="#{msg['status_existence']}" style="margin-left:  5px;"/>
-                        <h:selectOneRadio value="#{requestBean.curProduct.status}">
+                        <h:selectOneRadio value="#{requestBean.curProduct.status}" required="true">
                             <f:selectItem itemValue="STATUS_AVAILABLE" itemLabel="#{msg['goodsavail_true']}" />
                             <f:selectItem itemValue="STATUS_UNAVAILABLE" itemLabel="#{msg['goodsavail_false']}" />
                         </h:selectOneRadio>

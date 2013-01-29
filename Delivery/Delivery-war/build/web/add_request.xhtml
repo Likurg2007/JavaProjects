@@ -22,7 +22,7 @@
                         <h:inputText value="#{requestBean.request.credentials}"  required="false" />
                         <h:outputLabel value=""/>
                         <h:outputLabel value="#{msg['status_paid']}" />
-                        <h:selectOneRadio value="#{requestBean.request.status}"> 
+                        <h:selectOneRadio value="#{requestBean.request.status}" required="true"> 
                             <f:selectItem itemValue="STATUS_PAID" itemLabel="#{msg['goodspayment_true']}" />
                             <f:selectItem itemValue="STATUS_UNPAID" itemLabel="#{msg['goodspayment_false']}" />
                         </h:selectOneRadio>
