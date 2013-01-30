@@ -44,9 +44,7 @@ public final class PageController {
     public static void updateModelCondition(DataModel dataModel, Pagination pagin, RequestDAO rdao) throws Exception {
         int maxReturnValues = (pagin.getCurrentPage() + 1) * pagin.getRecordsOnPage();
         int firstOfReturned = (pagin.getCurrentPage()) * pagin.getRecordsOnPage();
-        System.out.println("BEFORE SET WD");
         dataModel.setWrappedData(rdao.findEntitiesWithAvailableStatus(false, pagin.getRecordsOnPage(), firstOfReturned));
-        System.out.println("AFTER SET WD");
         updatePaginationCondition(dataModel, pagin, rdao);
     }
 

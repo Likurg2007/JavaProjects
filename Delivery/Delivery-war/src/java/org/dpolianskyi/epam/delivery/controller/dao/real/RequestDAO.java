@@ -141,7 +141,6 @@ public class RequestDAO extends CRUD<Request, Long> implements IRequestDAO {
                 resultList.add(cr);
             }
             for (Object elem : resultList) {
-                System.out.println("ELEM:   " + elem);
             }
             return resultList;
         } catch (NullPointerException e) {

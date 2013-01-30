@@ -154,7 +154,6 @@ public class CurProductDAO extends CRUD<CurProduct, Long> implements ICurProduct
         try {
             List resultListId = nquery.getResultList();
             resultListIdSize = new Long(resultListId.size() - 1);
-            System.out.println("resultListIdSize:   " + resultListIdSize);
             return resultListIdSize;
         } catch (NullPointerException e) {
             LogBean.getLogger().debug(FINDMSG + " " + java.util.Calendar.getInstance().getTime());
