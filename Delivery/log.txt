@@ -16862,3 +16862,820 @@ DEBUG http-thread-pool-8080(5) root - Try to find by id: 22 Tue Jan 29 23:53:31 
 DEBUG http-thread-pool-8080(5) root - Try to find by id: 23 Tue Jan 29 23:53:31 EET 2013
 DEBUG http-thread-pool-8080(5) root - Try to find by id: 24 Tue Jan 29 23:53:31 EET 2013
 DEBUG http-thread-pool-8080(5) root - Try to find by id: 25 Tue Jan 29 23:53:31 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to persist: Request Wed Jan 30 13:36:02 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to merge: Request Wed Jan 30 13:36:26 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to persist: Request Wed Jan 30 13:37:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to persist: Request Wed Jan 30 13:37:32 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to persist: Request Wed Jan 30 13:37:53 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to persist: Request Wed Jan 30 13:38:11 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to persist: Request Wed Jan 30 13:38:45 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to persist: Request Wed Jan 30 13:39:31 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to persist: Request Wed Jan 30 13:40:09 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to persist: Request Wed Jan 30 13:41:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to persist: Request Wed Jan 30 13:41:48 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to persist: Request Wed Jan 30 13:42:26 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to merge: Request Wed Jan 30 13:42:37 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to persist: Curpro_Request Wed Jan 30 13:44:07 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to merge: CurProduct Wed Jan 30 13:44:07 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to merge: Request Wed Jan 30 13:44:07 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:44:07 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:44:07 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:44:07 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 1 Wed Jan 30 13:44:16 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to merge: Request Wed Jan 30 13:44:58 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to persist: Curpro_Request Wed Jan 30 13:45:50 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to merge: CurProduct Wed Jan 30 13:45:50 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to merge: Request Wed Jan 30 13:45:50 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:45:50 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:45:50 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:45:50 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to persist: Curpro_Request Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to merge: CurProduct Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to merge: Request Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:28 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 13:47:31 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:47:43 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:47:43 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:47:43 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:47:43 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:47:43 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:47:43 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:47:46 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:48:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:48:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:48:09 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:50:58 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:05 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:05 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:05 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:51:10 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:14 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:14 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:14 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 1 Wed Jan 30 13:51:18 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:40 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:51:51 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to merge: Request Wed Jan 30 13:51:58 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:58 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:58 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:51:58 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:57:57 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:57:57 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 1 Wed Jan 30 13:57:57 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 1 Wed Jan 30 13:57:59 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 1 Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to remove: Curpro_Request Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to remove: CurProduct Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to remove: Request Wed Jan 30 13:58:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:59:34 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:59:34 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:59:34 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:59:34 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 13:59:34 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 13:59:34 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 3 Wed Jan 30 13:59:38 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to merge: CurProduct Wed Jan 30 14:00:01 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 14:00:02 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 14:00:02 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 14:00:02 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 14:00:02 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 2 Wed Jan 30 14:00:02 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 3 Wed Jan 30 14:00:02 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 3 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 2 Wed Jan 30 14:02:27 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 2 Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to remove: Curpro_Request Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to remove: CurProduct Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to remove: Curpro_Request Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to remove: CurProduct Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to remove: Request Wed Jan 30 14:02:32 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to persist: Curpro_Request Wed Jan 30 14:10:11 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to merge: CurProduct Wed Jan 30 14:10:11 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to merge: Request Wed Jan 30 14:10:11 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:11 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:11 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:19 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:20 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:20 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:20 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:24 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:24 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:24 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to persist: Curpro_Request Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to merge: CurProduct Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to merge: Request Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:10:36 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:10:37 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:38 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:10:38 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:38 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:10:38 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:10:38 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:10:38 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:10:39 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:10:40 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:10:40 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:10:40 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:10:40 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:10:40 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:10:40 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:10 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:10 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:10 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:10 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:10 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:10 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:16 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:16 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:20 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:21 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:21 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:21 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:21 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:11:21 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:11:21 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:11:23 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:11:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:11:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:11:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:11:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:11:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:11:24 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:28 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:11:51 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:11:51 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:11:51 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:11:51 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:11:51 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:11:51 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:11:53 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to merge: CurProduct Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:11:54 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:00 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:02 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:03 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:04 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 4 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 5 Wed Jan 30 14:12:05 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:12:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:12:08 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:12:09 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:10 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:12:11 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:17:39 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to merge: CurProduct Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:17:41 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 5 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:17:44 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(1) root - Try to persist: Curpro_Request Wed Jan 30 14:18:20 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to merge: CurProduct Wed Jan 30 14:18:20 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to merge: Request Wed Jan 30 14:18:20 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 6 Wed Jan 30 14:18:20 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 6 Wed Jan 30 14:18:20 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 6 Wed Jan 30 14:18:20 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 7 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 7 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 4 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 7 Wed Jan 30 14:18:24 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:19:05 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:19:05 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:19:05 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:19:05 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 4 Wed Jan 30 14:19:05 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 5 Wed Jan 30 14:19:05 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 4 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 5 Wed Jan 30 14:19:06 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:19:07 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:19:07 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:19:07 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:19:07 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 4 Wed Jan 30 14:19:07 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:19:07 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl

@@ -30,10 +30,6 @@
                             <h:outputText value="#{item.status.toString()}" />
                         </h:column>
                         <h:column>
-                            <f:facet name="header"><h>#{msg['status_existence']}</h></f:facet>
-                            <h:outputText value="#{requestBean.curProduct.status.toString()}" />
-                        </h:column>
-                        <h:column>
                             <f:facet name="header"><h>#{msg['actions']}</h></f:facet>    
                             <h:commandLink hreflang="#" class="button small red" action="#{requestBean.removeDelivery()}" value="#{msg['denial_of_delivery']}" onclick="return confirm('#{msg['del_order']}')"/>        
                             <h:commandLink hreflang="#" class="button small orange" action="#{requestBean.setupEditDelivery()}" value="#{msg['edit']}" />  
