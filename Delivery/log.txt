@@ -17679,3 +17679,150 @@ DEBUG http-thread-pool-8080(1) root - Try to find by id: 5 Wed Jan 30 14:19:07 E
 DEBUG http-thread-pool-8080(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
 DEBUG http-thread-pool-8080(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
 DEBUG http-thread-pool-8080(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(4) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(2) root - Try to remove: Request Thu Jan 31 00:58:47 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(1) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(2) root - Try to find by id: 4 Thu Jan 31 00:59:01 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to find by id: 7 Thu Jan 31 00:59:01 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to find by id: 4 Thu Jan 31 00:59:01 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to find by id: 7 Thu Jan 31 00:59:01 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to find by id: 4 Thu Jan 31 00:59:01 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to find by id: 7 Thu Jan 31 00:59:01 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to remove: Curpro_Request Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to remove: CurProduct Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to remove: Request Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 4 Thu Jan 31 00:59:05 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:08 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to find by id: 4 Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to remove: Curpro_Request Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to remove: CurProduct Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to remove: Curpro_Request Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to remove: CurProduct Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to remove: Request Thu Jan 31 00:59:09 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(2) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(3) root - Try to select request count from: class org.eclipse.persistence.internal.jpa.EntityManagerImpl
+DEBUG http-thread-pool-56604(1) root - Try to persist: Curpro_Request Thu Jan 31 01:07:33 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to merge: CurProduct Thu Jan 31 01:07:33 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to merge: Request Thu Jan 31 01:07:33 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 01:07:33 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 01:07:33 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to find by id: 7 Thu Jan 31 01:07:33 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 7 Thu Jan 31 01:07:38 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 3 Thu Jan 31 01:07:39 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 3 Thu Jan 31 01:07:39 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to find by id: 3 Thu Jan 31 01:07:39 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:40 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:40 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to find by id: 3 Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to remove: Curpro_Request Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to remove: CurProduct Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to remove: Request Thu Jan 31 01:07:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to persist: Curpro_Request Thu Jan 31 10:47:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to merge: CurProduct Thu Jan 31 10:47:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to merge: Request Thu Jan 31 10:47:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 10:47:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 10:47:41 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 10:47:41 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 8 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 6 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 6 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 6 Thu Jan 31 10:51:24 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 10:54:01 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 10:54:01 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 10:54:01 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 8 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Thu Jan 31 10:55:05 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 6 Thu Jan 31 10:56:16 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 6 Thu Jan 31 10:56:16 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to find by id: 6 Thu Jan 31 10:56:16 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 6 Thu Jan 31 10:56:17 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 6 Thu Jan 31 10:56:17 EET 2013
+DEBUG http-thread-pool-8080(2) root - Try to find by id: 6 Thu Jan 31 10:56:17 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Thu Jan 31 10:56:19 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Thu Jan 31 10:56:19 EET 2013
+DEBUG http-thread-pool-8080(5) root - Try to find by id: 6 Thu Jan 31 10:56:19 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 6 Thu Jan 31 10:56:22 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 6 Thu Jan 31 10:56:22 EET 2013
+DEBUG http-thread-pool-8080(4) root - Try to find by id: 6 Thu Jan 31 10:56:22 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 11:08:59 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 11:08:59 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to find by id: 8 Thu Jan 31 11:08:59 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to remove: Curpro_Request Mon Feb 04 09:10:42 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to remove: CurProduct Mon Feb 04 09:10:42 EET 2013
+DEBUG http-thread-pool-56604(4) root - Try to remove: Request Mon Feb 04 09:10:42 EET 2013
+DEBUG http-thread-pool-56604(3) root - Try to remove: Request Mon Feb 04 09:10:45 EET 2013
+DEBUG http-thread-pool-56604(1) root - Try to remove: Request Mon Feb 04 09:10:46 EET 2013
+DEBUG http-thread-pool-56604(2) root - Try to remove: Request Mon Feb 04 09:10:48 EET 2013
+DEBUG http-thread-pool-56604(5) root - Try to remove: Request Mon Feb 04 09:10:50 EET 2013

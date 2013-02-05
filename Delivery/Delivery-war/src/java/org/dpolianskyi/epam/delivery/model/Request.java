@@ -101,9 +101,6 @@ public class Request implements Serializable {
             return false;
         }
         final Request other = (Request) obj;
-        if (this.id != other.id && (this.id == null || !this.id.equals(other.id))) {
-            return false;
-        }
         if ((this.code == null) ? (other.code != null) : !this.code.equals(other.code)) {
             return false;
         }

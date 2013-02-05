@@ -75,7 +75,6 @@ public class Curpro_Request implements Serializable {
         int hash = 7;
         hash = 13 * hash + (this.request != null ? this.request.hashCode() : 0);
         hash = 13 * hash + (this.curproduct != null ? this.curproduct.hashCode() : 0);
-        hash = 13 * hash + (this.id != null ? this.id.hashCode() : 0);
         hash = 13 * hash + (this.cpquant != null ? this.cpquant.hashCode() : 0);
         return hash;
     }
