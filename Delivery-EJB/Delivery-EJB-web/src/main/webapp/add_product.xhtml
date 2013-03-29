@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+    </h:head>
+    <ui:include src="langWithoutButton.xhtml"/>
+    <h:body>
+        <h:form>
+            <center>
+                <div id="buttonContainer" class="commontext">
+                    <h3><h:outputText value="#{msg['add_product_header']}"/></h3>
+                    <h:panelGrid columns="3">
+                        <h:outputLabel value="#{msg['name']}" />
+                        <h:inputText id="productname" value="#{requestBean.curProduct.name}"  required="true">
+                            <f:validator validatorId="modelValidator"/>
+                        </h:inputText>
+                        <h:messages for="productname" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
+                        <h:outputLabel value="#{msg['model']}" />
+                        <h:inputText id="modelname" value="#{requestBean.curModelName}"  required="true">
+                            <f:validator validatorId="modelValidator"/>
+                        </h:inputText>
+                        <h:messages for="modelname" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
+                        <h:outputLabel value="#{msg['year']}" />
+                        <h:inputText id="year" value="#{requestBean.curProduct.year}"  required="false">
+                            <f:validator validatorId="yearValidator"/>
+                        </h:inputText>
+                        <h:messages for="year" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
+                        <h:outputLabel value="#{msg['description']}" />
+                        <h:inputText value="#{requestBean.curProduct.description}"  required="true" style="margin: 5px;"/>
+                        <h:outputText value=""/>
+                        <h:outputLabel value="#{msg['category']}" />
+                        <h:inputText id="categoryname" value="#{requestBean.curCategoryName}"  required="true">
+                            <f:validator validatorId="categoryValidator"/>
+                        </h:inputText>
+                        <h:messages for="categoryname" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
+                        <h:outputLabel value="#{msg['producer']}" />
+                        <h:inputText id="producername" value="#{requestBean.curProducerName}"  required="true">
+                            <f:validator validatorId="producerValidator"/>
+                        </h:inputText>
+                        <h:messages for="producername" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;"/>
+                        <h:outputLabel value="#{msg['status_existence']}" style="margin-left:  5px;"/>
+                        <h:selectOneRadio value="#{requestBean.curProduct.status}" required="true">
+                            <f:selectItem itemValue="STATUS_AVAILABLE" itemLabel="#{msg['goodsavail_true']}" />
+                            <f:selectItem itemValue="STATUS_UNAVAILABLE" itemLabel="#{msg['goodsavail_false']}" />
+                        </h:selectOneRadio>
+                    </h:panelGrid>
+                    <h:panelGrid columns="2">
+                        <h:commandLink hreflang="#" class="button small green" value="#{msg['add']}" action="#{requestBean.createProduct()}"/>
+                        <h:commandLink hreflang="#" class="button small red" immediate="true" value="#{msg['cancel']}" action="list_products"/>
+                    </h:panelGrid>
+                </div>
+            </center>
+        </h:form>
+    </h:body>
+</html>

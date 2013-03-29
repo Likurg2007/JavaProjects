@@ -7,3 +7,6 @@
 /Delivery/Delivery-ejb/dist/
 /Delivery/build/
 /Delivery/dist/
+/Delivery-EJB/Delivery-EJB-ear/target/
+/Delivery-EJB/Delivery-EJB-ejb/target/
+/Delivery-EJB/Delivery-EJB-web/target/

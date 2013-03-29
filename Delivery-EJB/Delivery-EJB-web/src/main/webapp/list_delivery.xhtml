@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='windows-1251' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+    </h:head>
+    <h:body>
+        <ui:include src="langWithoutButton.xhtml"/>
+        <center>
+            <h:form>            
+                <div id="buttonContainer" class="commontext">
+                    <h2 style="size: 15px; color: #212121">#{msg['deliverylist']}</h2>                   
+                    <h:dataTable value="#{requestBean.modelDelivery}" var="item" 
+                                 styleClass="commontext"
+                                 headerClass="order-table-header"
+                                 rowClasses="order-table-odd-row,order-table-even-row"	
+                                 >
+                        <h:column>
+                            <f:facet name="header"><h>#{msg['number']}</h></f:facet>
+                            #{item.code}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header">#{msg['full_name']}</f:facet>
+                            #{item.credentials}
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header"><h>#{msg['status_paid']}</h></f:facet>
+                            <h:outputText value="#{item.status.toString()}" />
+                        </h:column>
+                        <h:column>
+                            <f:facet name="header"><h>#{msg['actions']}</h></f:facet>    
+                            <h:commandLink hreflang="#" class="button small red" action="#{requestBean.removeDelivery()}" value="#{msg['denial_of_delivery']}" onclick="return confirm('#{msg['del_order']}')"/>        
+                            <h:commandLink hreflang="#" class="button small orange" action="#{requestBean.setupEditDelivery()}" value="#{msg['edit']}" />  
+                            <h:commandLink hreflang="#" class="button small green" action="#{requestBean.confirmDelivery()}" value="#{msg['confirm_order']}"/>
+                        </h:column>
+                    </h:dataTable>
+                </div>
+            </h:form>
+            <h:form>
+                <h:panelGrid columns="3">
+                    <h:commandLink hreflang="#" class="button small gray"  value="#{requestBean.pagination.currentPage} #{msg['page_of']} #{requestBean.deliveryQuantity}" action="#{requestBean.movePrevPageRequest()}" rendered="#{requestBean.pagination.possiblePrev}"/>
+                    <h:commandLink  hreflang="#" class="button small gray" value="#{msg['move_requests']}" action="#{requestBean.moveRequestPage()}"/>
+                    <h:commandLink hreflang="#" class="button small gray" value="#{requestBean.pagination.currentPage+2} #{msg['page_of']} #{requestBean.deliveryQuantity}" action="#{requestBean.moveNextPageRequest()}" rendered="#{requestBean.pagination.possibleNext}"/>   
+                </h:panelGrid>
+            </h:form>
+        </center>
+    </h:body>
+</html>

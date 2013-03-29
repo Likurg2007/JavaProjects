@@ -1,0 +1,3 @@
+DEBUG http-thread-pool-8080(5) root - Try to persist: Request Wed Mar 13 12:43:48 EET 2013
+DEBUG http-thread-pool-8080(3) root - Try to persist: Request Wed Mar 13 12:44:03 EET 2013
+DEBUG http-thread-pool-8080(1) root - Try to remove: Request Wed Mar 13 12:44:12 EET 2013

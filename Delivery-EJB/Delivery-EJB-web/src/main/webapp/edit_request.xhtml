@@ -1,0 +1,38 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+    <h:head>
+    </h:head>
+    <ui:include src="langWithoutButton.xhtml"/> 
+    <h:body>
+        <h:form>   
+            <center>
+                <div id="buttonContainer" class="commontext">
+                    <h3><h:outputText value="#{msg['edit_order']}"/></h3>
+                    <h:panelGrid columns="3">
+                        <h:outputLabel value="#{msg['number']}" />
+                        <h:inputText id="code" value="#{requestBean.request.code}"  required="true">
+                            <f:validator validatorId="requestCodeValidator" />
+                        </h:inputText>   
+                        <h:messages for="code" style="color:#999999;font-style:italic;text-shadow:1px 1px 0 #FFFFFF; font-size: 15px; margin: 5px;" />
+                        <h:outputLabel value="#{msg['full_name']}" />
+                        <h:inputText value="#{requestBean.request.credentials}"   required="false" />
+                        <h:outputLabel value=""/>
+                        <h:outputLabel value="#{msg['status_paid']}" />
+                        <h:selectOneRadio value="#{requestBean.request.status}" required="true"> 
+                            <f:selectItem itemValue="STATUS_PAID" itemLabel="#{msg['goodspayment_true']}" />
+                            <f:selectItem itemValue="STATUS_UNPAID" itemLabel="#{msg['goodspayment_false']}" />
+                        </h:selectOneRadio>
+                    </h:panelGrid>
+                    <h:panelGrid columns="2">
+                        <h:commandLink hreflang="#" class="button small green" value="#{msg['confirm_edit']}" action="#{requestBean.editRequest}"/>
+                        <h:commandLink hreflang="#" class="button small red" immediate="true" value="#{msg['cancel']}" action="list_requests"/>   
+                    </h:panelGrid>
+                </div>
+            </center>
+        </h:form>
+    </h:body>
+</html>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"   
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      >
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="resources/css/page.css" />
+    <link rel="stylesheet" type="text/css" href="resources/buttons/buttons.css" />
+    <link rel="stylesheet" href="resources/css/style.css" type="text/css" media="screen"/>
+    <script type="text/javascript" src="resources/js/jquery.min.js"/>
+    <script type="text/javascript" src="resources/js/accordAnimate.js"/>
+    <f:view locale="#{languageBean.locale}">
+        <ui:include src = "WEB-INF/templates/footer.xhtml"/>
+        <h:body>
+            <p class="note">You're welcome, manager. Click on the appropriate element to select the language.</p>
+            <div id="content">
+
+                <h:form>
+
+                    <ul class="accordion" id="accordion">
+                        <li class="bg1">
+                            <div class="heading">English</div>
+                            <h:commandLink action="#{languageBean.setLanguageRedirect('eng','ENG')}">
+                                <h:graphicImage style="width: 100%; height: 100%" url="resources/img/us_big.jpg"></h:graphicImage>
+                            </h:commandLink>
+                            <div class="description">
+                                <h2>English</h2>
+
+                            </div>
+                        </li>
+
+                        <li class="bg2">
+                            <div class="heading">Ukranian</div>
+                            <h:commandLink action="#{languageBean.setLanguageRedirect('ua','UA')}">
+                                <h:graphicImage style="width: 100%; height: 100%" url="resources/img/ua_big.jpg"></h:graphicImage>
+                            </h:commandLink> 
+                            <div class="description">
+                                <h2>Ukranian</h2>
+                            </div>
+
+                        </li>
+                        <li class="bg3">
+                            <div class="heading">Russian</div>
+                            <h:commandLink action="#{languageBean.setLanguageRedirect('ru','RU')}">
+                                <h:graphicImage style="width: 100%; height: 100%" value="resources/img/ru_big.jpg"/>
+                            </h:commandLink>
+                            <div class="description">
+                                <h2>Russian</h2>
+                            </div>
+                        </li>
+                    </ul>
+                </h:form>
+            </div>
+        </h:body>
+    </f:view>
+</html>

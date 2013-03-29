@@ -1,0 +1,30 @@
+package org.dpolianskyi.epam.delivery.controller.dao.entity.interf;
+
+import java.util.List;
+import javax.ejb.Local;
+import org.dpolianskyi.epam.delivery.controller.dao.interf.ICRUD;
+import org.dpolianskyi.epam.delivery.model.Request;
+import org.dpolianskyi.epam.delivery.model.StatusEnum;
+
+/**
+ *
+ * @author Likurg
+ */
+@Local
+public interface IRequestDAO extends ICRUD<Request, Long> {
+
+    public List<Request> findAll();
+
+    public List<Request> findByCode(String c);
+
+    public List<Request> findByStatus(StatusEnum st);
+
+    public List<Request> findByCredentials(String str);
+
+    public Long selectRequestCount();
+    
+    public Long selectDeliveryCount();
+
+    public List<Request> findEntitiesWithAvailableStatus(boolean all, int maxResults, int firstResult) throws Exception;
+    
+}
